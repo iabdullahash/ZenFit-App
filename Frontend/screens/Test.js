@@ -27,9 +27,11 @@ export default function App() {
     
     const fetchStepsData = async (opt) => {
       const res = await GoogleFit.getDailyStepCountSamples(opt);
+      console.log(res[2].steps)
       if (res.length !== 0) {
         for (var i = 0; i < res.length; i++) {
           if (res[i].source === 'com.google.android.gms:estimated_steps') {
+            
             let data = res[i].steps.reverse();
             dailyStepCount = res[i].steps;
             setdailySteps(data[0].value);
@@ -48,7 +50,7 @@ export default function App() {
         setCalories('Not Found');
       } else {
         setCalories(Math.round(data[0].calorie * 1 * 100) / 100);
-        console.log(data)
+        // console.log(data)
       }
     };
     

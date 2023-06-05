@@ -953,6 +953,7 @@ import {
           <Stack.Screen
               name="Profile_"
               component={ProfileScreen}
+              
           />
 
           <Stack.Screen

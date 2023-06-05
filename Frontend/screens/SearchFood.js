@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from 'react';
+import React, { useState, useEffect,useContext, useCallback } from 'react';
 import { View, Text, Button, TextInput, FlatList, TouchableOpacity,StyleSheet,ScrollView,SafeAreaView,Dimensions } from 'react-native';
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
@@ -197,32 +197,25 @@ export const FoodDetailsScreen = ({ route }) => {
     // const sugars = extractNutritionValue(nutritionValues[8]);
     const protein = extractNutritionValue(nutritionValues[3]);
       
-    const handleAddItem = async () => {
-      // Generate a random meal item
-      try{
-        // const mealItem = {
-        //   name: "Example Meal",
-        //   quantity: 1,
-        //   calories: 350,
-        //   proteins: 20,
-        //   carbs: 30,
-        //   fats: 10,
-        // };
-        const currentQuantity = quantity;
-        console.log(currentQuantity)
-        let email = userData.email
-  
-        const response = await api.post('/add_meal',{mealType,foodItem,currentQuantity,email})
+    const handleAddItem = useCallback(async () => {
+      try {
         
-        message = await response.data.message
-        console.log(message)
-        // navigation.popToTop();
-        navigation.navigate('Diary')
-        // Add the meal item to the respective meal array based on the meal type
-      } catch(error){
+        let email = userData.email;
+  
+        const response = await api.post('/add_meal', {
+          mealType,
+          foodItem,
+          quantity,
+          email,
+        });
+  
+        const message = response.data.message;
+        console.log(message);
+        navigation.navigate('Diary');
+      } catch (error) {
         console.error('Error adding meal item:', error);
-      }  
-    };
+      }
+    }, [quantity, userData.email, mealType, foodItem, navigation]);
 
 
     React.useLayoutEffect(() => {
@@ -241,7 +234,7 @@ export const FoodDetailsScreen = ({ route }) => {
             }
           },
         });
-      }, [navigation,operation]);
+      }, [navigation,operation,handleAddItem]);
     
 
     

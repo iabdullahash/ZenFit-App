@@ -1,4 +1,4 @@
-import React, {useState,useEffect,useContext} from 'react';
+import React, {useState,useEffect,useContext, useCallback} from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView ,Dimensions} from 'react-native';
 import { UserContext } from '../config/global/UserContext';
 import Colors from "../constants/Colors"
@@ -17,26 +17,94 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const { userData } = useContext(UserContext);
   const [calories, setCalories] = useState(0);
-  const [dailySteps, setdailySteps] = useState(0);
+  const [dailySteps, setdailySteps] = useState();
+  const [weeklyData, setWeeklyData] = useState([0,0,0,0,0,0,0])
+  
+  // const [androidauth, setAndroidAuth] = useState(false)
+  // const [time,setTime] = useState(1000);
   const width = Dimensions.get('window').width
+
+  var today = new Date();
+    var lastWeekDate = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate() - 8,
+    );
+    
+    const opt = {
+      startDate: lastWeekDate.toISOString(), // required ISO8601Timestamp
+      endDate: today.toISOString(), // required ISO8601Timestamp
+      bucketUnit: 'DAY', // optional - default "DAY". Valid values: "NANOSECOND" | "MICROSECOND" | "MILLISECOND" | "SECOND" | "MINUTE" | "HOUR" | "DAY"
+      bucketInterval: 1, // optional - default 1.
+    };
+
+
   const chartData = {
     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
-        data: [3000, 4500, 2000, 3500, 5000, 6000, 4000],
+        data: weeklyData,
       },
     ],
   };
+  
+  // useEffect(() => {
+  //   if (GoogleFit.isAuthorized) {
+  //     fetchWeeklyData();
+  //   }
+  // },[fetchWeeklyData])
+    
 
   useEffect(() => {
     getAllDataFromAndroid();
-    }, []);
+    const interval = setInterval(() => {
+      getAllDataFromAndroid()
+    }, 10000);
 
-    const fetchStepsData = async (opt) => {
+    return () => clearInterval(interval); 
+  }, [])
+
+
+    const fetchWeeklyData = useCallback(async () => {
+
+      // if (weeklyData.length === 0){/
+
+        const res = await GoogleFit.getDailyStepCountSamples(opt);
+        if (res.length !== 0) {
+          for (var i = 0; i < res.length; i++) {
+            if (res[i].source === 'com.google.android.gms:estimated_steps') {
+              
+                // setWeeklyData(res[i].steps)
+                let tempchartdata = [0,0,0,0,0,0,0];
+                res[i].steps.forEach((dataPoint) => {
+                  
+                  const dayOfWeek = new Date(dataPoint.date).getDay();
+                 
+                  tempchartdata[dayOfWeek] = dataPoint.value;
+                });
+                setWeeklyData(tempchartdata)
+                // console.log(weeklyData)
+                // console.log(chartData.datasets)
+
+                return
+            }
+          }
+        } else {
+          console.log('Not Found');
+      }
+    // }
+    },[weeklyData])
+  
+
+    const fetchStepsData = async () => {
+      // console.log('fetch steps called')
+
+      
       const res = await GoogleFit.getDailyStepCountSamples(opt);
       if (res.length !== 0) {
         for (var i = 0; i < res.length; i++) {
           if (res[i].source === 'com.google.android.gms:estimated_steps') {
+            console.log(res[i].steps)
             let data = res[i].steps.reverse();
             dailyStepCount = res[i].steps;
             setdailySteps(data[0].value);
@@ -48,18 +116,21 @@ const HomeScreen = () => {
       }
     };
     
-    const fetchCaloriesData = async (opt) => {
+    const fetchCaloriesData = async () => {
       const res = await GoogleFit.getDailyCalorieSamples(opt);
       let data = res.reverse();
       if (data.length === 0) {
         setCalories('Not Found');
       } else {
         setCalories(Math.round(data[0].calorie));
-        console.log(data)
+        // console.log(data)
       }
     };
     
     const getAllDataFromAndroid = () =>{
+      // if (time === 1000){
+      //   setTime(10000)
+      // }
     const options = {
       scopes: [
         Scopes.FITNESS_ACTIVITY_READ,
@@ -75,33 +146,23 @@ const HomeScreen = () => {
       ],
     };
   GoogleFit.checkIsAuthorized().then(() => {
-    var today = new Date();
-    var lastWeekDate = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate() - 8,
-    );
-    
-    const opt = {
-      startDate: lastWeekDate.toISOString(), // required ISO8601Timestamp
-      endDate: today.toISOString(), // required ISO8601Timestamp
-      bucketUnit: 'DAY', // optional - default "DAY". Valid values: "NANOSECOND" | "MICROSECOND" | "MILLISECOND" | "SECOND" | "MINUTE" | "HOUR" | "DAY"
-      bucketInterval: 1, // optional - default 1.
-    };
     
       var authorized = GoogleFit.isAuthorized;
-      console.log(authorized);
+      // console.log(authorized);
       if (authorized) {
-        fetchStepsData(opt);
-        fetchCaloriesData(opt);
+
+        fetchWeeklyData()
+        fetchStepsData();
+        fetchCaloriesData();
       } else {
         // Authentication if already not authorized for a particular device
         GoogleFit.authorize(options)
           .then(authResult => {
             if (authResult.success) {
               console.log('AUTH_SUCCESS');
-              fetchStepsData(opt);
-              fetchCaloriesData(opt);
+              fetchWeeklyData();
+              fetchStepsData();
+              fetchCaloriesData();
   
   
               // if successfully authorized, fetch data
@@ -114,7 +175,7 @@ const HomeScreen = () => {
           });
       }
   });
-  }
+  };
 
   const chartConfig =  {
     backgroundColor: Colors.primary,

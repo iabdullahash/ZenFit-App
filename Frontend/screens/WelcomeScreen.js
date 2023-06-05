@@ -1,7 +1,7 @@
 import {
   Dimensions,
   ImageBackground,
-  SafeAreaView,
+  SafeAreaView, 
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -129,7 +129,7 @@ const WelcomeScreen = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </SafeAreaView > 
   );
 };
 
