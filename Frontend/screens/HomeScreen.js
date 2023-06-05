@@ -135,7 +135,7 @@ const HomeScreen = () => {
     <Animated.View entering={FadeInDown.delay(400).duration(500)} exiting={FadeInUp.delay(400).duration(500)}>
       <View style={styles.profileContainer}>
         <View style={{flexDirection:'row',alignItems:'center'}}>
-          <Image source={require('../assets/images/cow.jpg')} style={styles.profileImage} />
+          <Image source={{uri: userData.avatar}} style={styles.profileImage} />
           <View style={styles.profileTextContainer}>
             <Text style={styles.profileText}>Hello</Text>
             <Text style={styles.profileName}>{userData?.name || 'Guest'}</Text>

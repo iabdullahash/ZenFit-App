@@ -1,8 +1,124 @@
 {
-
-    "avatars":[
+    "avatars": [
         {
-            
+            "id": 1,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVSjn.png"
+        },
+        {
+            "id": 2,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bV1xr.png"
+        },
+        {
+            "id": 3,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVpyc.png"
+        },
+        {
+            "id": 4,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVDmY.png"
+        },
+        {
+            "id": 5,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVKEq.png"
+        },
+        {
+            "id": 6,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVTos.png"
+        },
+        {
+            "id": 7,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVYDD.png"
+        },
+        {
+            "id": 8,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVZCM.png"
+        },
+        {
+            "id": 9,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVmg4.png"
+        },
+        {
+            "id": 10,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVr21.png"
+        },
+        {
+            "id": 11,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bV6xX.png"
+        },
+        {
+            "id": 12,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVLjV.png"
+        },
+        {
+            "id": 13,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVx0l.png"
+        },
+        {
+            "id": 14,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bV5m3.png"
+        },
+        {
+            "id": 15,
+            "type": "Male",
+            "url": "https://imgtr.ee/images/2023/06/05/bVVEL.png"
+        },
+        {
+            "id": 16,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bVAq0.png"
+        },
+        {
+            "id": 17,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bVhDF.png"
+        },
+        {
+            "id": 18,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bV4Cm.png"
+        },
+        {
+            "id": 19,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bVI7U.png"
+        },
+        {
+            "id": 20,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bVe2B.png"
+        },
+        {
+            "id": 21,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bhGoq.png"
+        },
+        {
+            "id": 22,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bhMps.png"
+        },
+        {
+            "id": 23,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bhO4D.png"
+        },
+        {
+            "id": 24,
+            "type": "Female",
+            "url": "https://imgtr.ee/images/2023/06/05/bhRgM.png"
         }
     ],
     "users": [
@@ -256,7 +372,7 @@
             "email": "Fapo@gmail.com",
             "password": "Fapochan123",
             "gender": "Female",
-            "avatar": "person_0.png",
+            "avatar": "https://imgtr.ee/images/2023/06/05/bVKEq.png",
             "weight": {
                 "amount": "40",
                 "unit": "kg"
@@ -310,6 +426,31 @@
                         "quantity": 1
                     }
                 ]
+            }
+        },
+        {
+            "name": "xyz@gmail.com",
+            "email": "xyz",
+            "password": "xyz890",
+            "gender": "Male",
+            "avatar": "https://imgtr.ee/images/2023/06/05/bVYDD.png",
+            "weight": {
+                "amount": "52",
+                "unit": "kg"
+            },
+            "height": 150,
+            "age": 20,
+            "goals": {
+                "requiredCalories": 1676,
+                "dailyStepsGoal": 10000,
+                "dailyCalorieBurnGoal": 880
+            },
+            "googleAuthKey": "",
+            "meals": {
+                "breakfast": [],
+                "lunch": [],
+                "dinner": [],
+                "snacks": []
             }
         }
     ],

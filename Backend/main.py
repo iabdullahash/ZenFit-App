@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from extras import calculate_calorie_intake,calculate_steps_to_burn_calories,calculate_calories_goal
 import json
+from random import choice
 
 app = Flask(__name__)
 
@@ -58,6 +59,10 @@ def signup():
     
     data = load_data()
     users = data.get('users', [])
+    avatars = data.get('avatars',[])
+    av_gender = [avatar for avatar in avatars if avatar['type']==gender]
+    gen_choice = choice(av_gender)['url']
+
 
     # Check if the email is already registered
     for user in users:
@@ -66,8 +71,9 @@ def signup():
 
     # Create a new user and add it to the database
     calorie_intake = calculate_calorie_intake(gender, int(age), int(height), weight)
+
     goals = {"requiredCalories": calorie_intake, "dailyStepsGoal": 10000, "dailyCalorieBurnGoal": 880}
-    new_user = {'name':name,'email': email, 'password': password,'gender':gender ,"weight": weight,"height": int(height),'age': int(age),'goals': goals,"googleAuthKey":'',"meals": {"breakfast":[],"lunch":[],"dinner":[],"snacks":[]}}
+    new_user = {'name':name,'email': email, 'password': password,'gender':gender ,"avatar":gen_choice,"weight": weight,"height": int(height),'age': int(age),'goals': goals,"googleAuthKey":'',"meals": {"breakfast":[],"lunch":[],"dinner":[],"snacks":[]}}
     users.append(new_user)
     data['users'] = users
     save_data(data)
@@ -124,7 +130,34 @@ def info_chg():
             
     return jsonify({'message': 'Goals Changed Successfully','result': upd_user}) 
     
+@app.route("/api/avatar_chg", methods=["GET","POST"]) 
+def avatar_chg():
+    user_email = request.json.get('user_email')
+    new_avatar = request.json.get('prof_avatar')
 
+    data = load_data()
+    users = data.get('users', [])
+
+    for user in users :
+        if user['email'] == user_email:
+            upd_user = user
+            user['avatar'] = new_avatar
+            data['users'] = users
+            save_data(data)
+
+    return jsonify({'message': 'Avatar Changes Successfully','result': upd_user})
+
+
+
+
+
+@app.route("/api/avatars_array", methods=["GET"]) 
+def avatars_array():
+
+    data = load_data()
+    avatars = data.get('avatars',[])
+
+    return jsonify(avatars)
 
 
 
@@ -139,6 +172,8 @@ def get_meals():
     for user in users:
         if user['email'] == email:
             return jsonify(user['meals'])
+        
+    
 
 
 @app.route('/api/add_meal', methods=['POST'])
@@ -263,7 +298,9 @@ def calories_goal_chg():
             
 
 
-            
+ 
+  
+
 
 
                 

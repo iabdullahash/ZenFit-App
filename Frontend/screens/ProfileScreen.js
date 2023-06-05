@@ -13,7 +13,9 @@ import {
   } from "react-native";
   import React from "react";
   import {useState} from "react";
-  import { MaterialIcons } from '@expo/vector-icons'; 
+  import {useEffect} from "react";
+  import { useCallback } from "react";
+  import { MaterialCommunityIcons } from '@expo/vector-icons'; 
   import { useNavigation } from '@react-navigation/native';
   import { createStackNavigator } from '@react-navigation/stack';
   import Spacing from "../constants/Spacing";
@@ -25,12 +27,10 @@ import {
   import api from "../config/api/index";
   import {useContext} from 'react';
   import { UserContext } from '../config/global/UserContext';
-  // import { Platform } from 'react-native';
-  // import { getAbsolutePath } from 'react-native-fs';
- 
   
-  
+
   const Stack = createStackNavigator();
+  
  
  
   const ArrowButton = ({onPress}) => (
@@ -44,12 +44,7 @@ import {
   
     const navigation = useNavigation();
     const { userData , clearUserContext } = useContext(UserContext);
-    // const imagePath = '../assets/avatar/person_0.png';
-    // const absolutePath = `${Platform.OS === 'android' ? 'file://' : ''}${getAbsolutePath(imagePath)}`;
-    
-    const Profile_avatar = userData.avatar
-    console.log(Profile_avatar);
-   
+  
     const handleLogout = () => {
       clearUserContext();
       // navigation.navigate('Welcome');
@@ -126,7 +121,7 @@ import {
             style={[styles.infoContainer,{paddingTop:Spacing*1}]}
           >
 
-            {/* <Image source={{ uri: absolutePath }}  style={styles.Image}/>  */}
+            <Image source={{uri: userData.avatar}}  style={styles.Image}/> 
               
               
           </View>
@@ -134,7 +129,7 @@ import {
             style={[styles.infoContainer,{paddingTop:Spacing*1}]}
           >
 
-              <TouchableOpacity >
+              <TouchableOpacity onPress={() => navigation.navigate("Avatar")} >
                 <Text 
                   style ={{
                       color : '#079ef0'
@@ -194,8 +189,6 @@ import {
       </SafeAreaView>
     );
   };
-
-
 
   const Personal_info = () =>{
 
@@ -273,7 +266,7 @@ import {
             style={ styles.infoContainer}
           >
 
-            <Image source = {Profile_avatar}  style={styles.Image}/> 
+            <Image source={{uri: userData.avatar}}  style={styles.Image}/>
              
 
           </View>
@@ -447,7 +440,7 @@ import {
             style={styles.infoContainer}
           >
 
-            <Image source = {Profile_avatar}  style={styles.Image}/> 
+            <Image source={{uri: userData.avatar}}  style={styles.Image}/>  
 
 
           </View>
@@ -601,7 +594,7 @@ import {
             style={styles.infoContainer}
           >
 
-            <Image source = {Profile_avatar}  style={styles.Image}/> 
+            <Image source={{uri: userData.avatar}}  style={styles.Image}/>
 
 
           </View>
@@ -719,6 +712,113 @@ import {
 
   };
 
+  const Avatar_scrn = () =>{
+
+    const navigation = useNavigation();
+    const { userData , updateUser } = useContext(UserContext);
+    const [image_data, setimage_data] = useState([]);
+    const [prof_avatar ,set_prof_avatar] = useState('sfafasfasfasfasfasf')
+    useEffect(() => {
+      
+      api.get('/avatars_array')
+        .then(response => {
+          
+          const avatar_array = response.data;
+          console.log(response.data)
+         
+          setimage_data(avatar_array);
+
+        })
+        .catch(error => {
+          console.error('Error fetching image data:', error);
+        });
+    }, []);
+
+    const Avatar_chg = useCallback(() => {
+      console.log(prof_avatar)
+      api.post('/avatar_chg', { user_email: userData.email,prof_avatar })
+        .then(response => {
+          console.log('Image URL sent to the server:', prof_avatar);
+          const data = response.data;
+          
+          updateUser(data.result);
+          navigation.navigate('Profile_')
+          
+        })
+        .catch(error => {
+          console.error('Error sending image URL:', error);
+         
+        });
+    }, [userData.email,prof_avatar]);
+   
+    const render_array = ({ item }) => (
+      <View style={{ flex: 1, flexDirection: 'column', margin: 1 }}>
+        <TouchableOpacity onPress={() => set_prof_avatar(item.url)} >
+          <Image style={prof_avatar === item.url ? styles.Imagev2 : styles.Image} source={{ uri: item.url }} />
+        </TouchableOpacity>
+      </View>
+    );
+
+    React.useLayoutEffect(() => {
+      navigation.setOptions({
+      
+        headerRight: () => {
+         
+          return(
+          <TouchableOpacity style={{paddingRight:Spacing*1.6}} onPress={Avatar_chg}>
+            <MaterialCommunityIcons name="check" size={24} color="grey" />
+          </TouchableOpacity>
+          );  
+
+        },
+      });
+    }, [navigation,Avatar_chg]);
+
+    return (
+      <SafeAreaView
+      style={{
+        backgroundColor: Colors.background,
+        flex:1, 
+        paddingBottom:Spacing*4
+        }}
+        >
+          <ScrollView contentContainerStyle={styles.scrollViewContainer}>
+            <View
+              style={
+                {width:'100%',
+                  paddingHorizontal: Spacing * 2,
+                  paddingTop: Spacing * 8,
+                  paddingBottom: Spacing * 5,
+                  
+                }
+              }
+          
+          >
+            <Text
+                style={styles.titlev2}
+            >
+                Choose Your Avatar
+
+            </Text>
+            <View style={{ ...styles.separator, marginBottom: Spacing, height: 1 }} />
+
+            <FlatList
+              
+              data={image_data}
+              renderItem={render_array}
+              numColumns={3}
+              keyExtractor={(item) => item.id.toString()}
+              
+            />
+           
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    );
+
+
+  };
+
   const styles = StyleSheet.create({
 
     scrollViewContainer: {
@@ -734,6 +834,15 @@ import {
       borderRadius:50,
       resizeMode:'contain',
     },
+    Imagev2:{
+      // marginRight:Spacing*2,
+      width: 100,
+      height: 100,
+      borderRadius:20,
+      resizeMode:'contain',
+      borderWidth:2,
+      borderColor:Colors.primary
+    },
 
     contentContainer: {
       width:'100%',
@@ -744,6 +853,13 @@ import {
     },
     title: {
       alignSelf:'flex-start',
+      fontSize: FontSize.xLarge,
+      color: Colors.primary,
+      fontFamily: Font['poppins-bold'],
+      marginBottom: Spacing * 3,
+    },
+    titlev2: {
+      alignSelf:'center',
       fontSize: FontSize.xLarge,
       color: Colors.primary,
       fontFamily: Font['poppins-bold'],
@@ -814,9 +930,20 @@ import {
         shadowOpacity: 0.3,
         shadowRadius: Spacing,
       },
+      separator: {
+        height: 3,
+        alignSelf: 'flex-start',
+        padding: 0,
+        backgroundColor: Colors.accent,
+        marginBottom: 24,
+        width: '100%',
+        borderRadius: Spacing
+      },
 
 
   });
+
+
 
   const App = () => {
 
@@ -839,6 +966,20 @@ import {
           <Stack.Screen
             name="Goals"
             component={Goals}
+          />
+          <Stack.Screen
+            name="Avatar"
+            component={Avatar_scrn} 
+            options={{
+              headerShown:true,
+              title:'Change Avatar',
+              headerStyle:{backgroundColor:Colors.background,},
+              headerTitleStyle:{paddingTop:5,
+              fontFamily:Font['poppins-regular'],
+              color:Colors.onPrimary},
+              headerTintColor: 'grey',
+              headerStatusBarHeight:Spacing*3.5,
+              tabBarVisible: false}}
           />
       
         </Stack.Navigator>
