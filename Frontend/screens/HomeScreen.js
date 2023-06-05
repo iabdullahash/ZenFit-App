@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import { BarChart, LineChart } from 'react-native-chart-kit';
 import GoogleFit, { Scopes } from 'react-native-google-fit';
 import Animated, {FadeInUp,FadeInDown, FadeInRight } from 'react-native-reanimated';
+import api from '../config/api';
 
 
 const HomeScreen = () => {
@@ -17,7 +18,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const { userData } = useContext(UserContext);
   const [calories, setCalories] = useState(0);
-  const [dailySteps, setdailySteps] = useState();
+  const [dailySteps, setdailySteps] = useState(0);
   const [weeklyData, setWeeklyData] = useState([0,0,0,0,0,0,0])
   
   // const [androidauth, setAndroidAuth] = useState(false)
@@ -56,9 +57,12 @@ const HomeScreen = () => {
     
 
   useEffect(() => {
+    // fetchCaloriesData();
     getAllDataFromAndroid();
     const interval = setInterval(() => {
-      getAllDataFromAndroid()
+      console.log(dailySteps)
+      // fetchCaloriesData();
+      getAllDataFromAndroid();
     }, 10000);
 
     return () => clearInterval(interval); 
@@ -85,7 +89,6 @@ const HomeScreen = () => {
                 setWeeklyData(tempchartdata)
                 // console.log(weeklyData)
                 // console.log(chartData.datasets)
-
                 return
             }
           }
@@ -96,7 +99,7 @@ const HomeScreen = () => {
     },[weeklyData])
   
 
-    const fetchStepsData = async () => {
+    const fetchStepsData = useCallback(async () => {
       // console.log('fetch steps called')
 
       
@@ -108,24 +111,29 @@ const HomeScreen = () => {
             let data = res[i].steps.reverse();
             dailyStepCount = res[i].steps;
             setdailySteps(data[0].value);
+            fetchCaloriesData(data[0].value);
             return
           }
         }
       } else {
         console.log('Not Found');
       }
-    };
+    },[dailySteps]);
     
-    const fetchCaloriesData = async () => {
-      const res = await GoogleFit.getDailyCalorieSamples(opt);
-      let data = res.reverse();
-      if (data.length === 0) {
-        setCalories('Not Found');
-      } else {
-        setCalories(Math.round(data[0].calorie));
-        // console.log(data)
+    const fetchCaloriesData = useCallback(async (steps) => {
+      if (steps) {
+      try {
+        const response = await api.post('/calories',{steps,weight:userData.weight});
+        const data = await response.data;
+        setCalories(data);
+        userData.calories = data
+        return
+      } catch (error) {
+        console.error('Error fetching calories:', error);
+        return
       }
-    };
+    }
+    },[calories]);
     
     const getAllDataFromAndroid = () =>{
       // if (time === 1000){
@@ -153,7 +161,7 @@ const HomeScreen = () => {
 
         fetchWeeklyData()
         fetchStepsData();
-        fetchCaloriesData();
+        return
       } else {
         // Authentication if already not authorized for a particular device
         GoogleFit.authorize(options)
@@ -162,9 +170,7 @@ const HomeScreen = () => {
               console.log('AUTH_SUCCESS');
               fetchWeeklyData();
               fetchStepsData();
-              fetchCaloriesData();
-  
-  
+              return
               // if successfully authorized, fetch data
             } else {
               console.log('AUTH_DENIED ' + authResult.message);
@@ -176,6 +182,11 @@ const HomeScreen = () => {
       }
   });
   };
+
+  const handlerefresh = () => {
+    getAllDataFromAndroid();
+    fetchCaloriesData();
+  }
 
   const chartConfig =  {
     backgroundColor: Colors.primary,
@@ -215,7 +226,7 @@ const HomeScreen = () => {
         <Animated.View entering={FadeInDown.delay(800).duration(500)}>
         <Text style={styles.sectionTitle}>Today's Target</Text>
         <View>
-        <TouchableOpacity style={styles.targetContainer} onPress={getAllDataFromAndroid}>
+        <TouchableOpacity style={styles.targetContainer} onPress={handlerefresh}>
 
           <View style={{flexDirection:'column',justifyContent:'center'}}>
             <Text style={styles.targetTitle}>Total calories</Text>
@@ -235,7 +246,7 @@ const HomeScreen = () => {
 
 
         <Animated.View entering={FadeInDown.delay(1200).duration(500)}>
-        <TouchableOpacity style={styles.targetContainer} onPress={getAllDataFromAndroid}>
+        <TouchableOpacity style={styles.targetContainer} onPress={handlerefresh}>
 
           <View style={{flexDirection:'column',justifyContent:'center'}}>
             <Text style={styles.targetTitle}>Total steps</Text>

@@ -752,7 +752,7 @@ import {
     }, [userData.email,prof_avatar]);
    
     const render_array = ({ item }) => (
-      <View style={{ flex: 1, flexDirection: 'column', margin: 1 }}>
+      <View style={{ flex: 1, flexDirection: 'column', margin: 5 }}>
         <TouchableOpacity onPress={() => set_prof_avatar(item.url)} >
           <Image style={prof_avatar === item.url ? styles.Imagev2 : styles.Image} source={{ uri: item.url }} />
         </TouchableOpacity>
@@ -778,11 +778,13 @@ import {
       <SafeAreaView
       style={{
         backgroundColor: Colors.background,
-        flex:1, 
-        paddingBottom:Spacing*4
+        flex:1,
+        alignItems: 'center',
+        justifyContent: 'center', 
+        paddingBottom:Spacing*9
         }}
         >
-          <ScrollView contentContainerStyle={styles.scrollViewContainer}>
+          {/* <ScrollView contentContainerStyle={styles.scrollViewContainer}> */}
             <View
               style={
                 {width:'100%',
@@ -812,7 +814,7 @@ import {
             />
            
           </View>
-        </ScrollView>
+        {/* </ScrollView> */}
       </SafeAreaView>
     );
 

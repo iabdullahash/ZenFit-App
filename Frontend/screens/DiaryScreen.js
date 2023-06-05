@@ -214,7 +214,7 @@ const DiaryScreen = () => {
   const getRemainingCalories = () => {
     const goalCalories = userData.goals.requiredCalories; 
     const foodCalories = getTotalCalories();
-    const exerciseCalories = 0; 
+    const exerciseCalories = userData?.calories || 0; 
 
     return goalCalories - foodCalories + exerciseCalories;
   };
@@ -245,7 +245,7 @@ const DiaryScreen = () => {
           <Text style={{ ...styles.calorieText, fontSize: FontSize.large, paddingBottom: Spacing * 1.4 }}>+</Text>
 
           <View style={styles.calorieCalculation}>
-            <Text style={styles.calorieText}>0</Text>
+            <Text style={styles.calorieText}>{userData?.calories || 0}</Text>
             <Text style={styles.calorieTextspan}>Exercise</Text>
           </View>
 

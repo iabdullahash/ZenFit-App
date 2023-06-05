@@ -225,6 +225,13 @@ def delete_meal():
     return jsonify({"message": "Meal deleted successfully"})
 
 
+@app.route("/api/calories",methods=['GET','POST'])
+def calories():
+    weight = request.json.get('weight')
+    steps= request.json.get('steps')
+    # print(steps)  
+
+    return jsonify(int(calculate_calories_goal(weight,int(steps))))
 #--------------------------------------Password Change--------------------------------
 
 @app.route("/api/pass_chg",methods=['GET','POST'])
