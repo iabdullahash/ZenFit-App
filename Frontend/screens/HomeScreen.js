@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useContext, useCallback} from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView ,Dimensions} from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, SafeAreaView ,Dimensions, ScrollView} from 'react-native';
 import { UserContext } from '../config/global/UserContext';
 import Colors from "../constants/Colors"
 import Spacing from '../constants/Spacing';
@@ -41,7 +41,7 @@ const HomeScreen = () => {
 
 
   const chartData = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    labels: ['Sun','Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     datasets: [
       {
         data: weeklyData,
@@ -60,13 +60,12 @@ const HomeScreen = () => {
     // fetchCaloriesData();
     getAllDataFromAndroid();
     const interval = setInterval(() => {
-      console.log(dailySteps)
       // fetchCaloriesData();
       getAllDataFromAndroid();
-    }, 10000);
+    }, 5000);
 
-    return () => clearInterval(interval); 
-  }, [])
+    return () => {clearInterval(interval); }
+  }, [dailySteps])
 
 
     const fetchWeeklyData = useCallback(async () => {
@@ -107,10 +106,11 @@ const HomeScreen = () => {
       if (res.length !== 0) {
         for (var i = 0; i < res.length; i++) {
           if (res[i].source === 'com.google.android.gms:estimated_steps') {
-            console.log(res[i].steps)
+            // console.log(res[i].steps)
             let data = res[i].steps.reverse();
             dailyStepCount = res[i].steps;
             setdailySteps(data[0].value);
+            console.log(dailySteps)
             fetchCaloriesData(data[0].value);
             return
           }
@@ -135,7 +135,7 @@ const HomeScreen = () => {
     }
     },[calories]);
     
-    const getAllDataFromAndroid = () =>{
+    const getAllDataFromAndroid = useCallback(() =>{
       // if (time === 1000){
       //   setTime(10000)
       // }
@@ -181,7 +181,7 @@ const HomeScreen = () => {
           });
       }
   });
-  };
+  },[dailySteps]);
 
   const handlerefresh = () => {
     getAllDataFromAndroid();
@@ -202,7 +202,9 @@ const HomeScreen = () => {
     <SafeAreaView style={{
       backgroundColor:Colors.background,
       flex:1,
+      paddingBottom:Spacing*8
     }}>
+      <ScrollView style={styles.scrollViewContainer} showsVerticalScrollIndicator={false}>
     <View style={styles.container}>
     <Animated.View entering={FadeInDown.delay(400).duration(500)} exiting={FadeInUp.delay(400).duration(500)}>
       <View style={styles.profileContainer}>
@@ -287,11 +289,15 @@ const HomeScreen = () => {
       </View>
       </Animated.View>
     </View>
+    </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollViewContainer: {
+    flexGrow: 1,
+  },
   container: {
     flex: 1,
     padding: Spacing*1.6,

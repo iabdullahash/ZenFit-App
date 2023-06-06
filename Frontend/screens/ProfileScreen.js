@@ -97,14 +97,14 @@ import {
       style={{
         backgroundColor: Colors.background,
         flex:1,
-
+        
         }}>
         
         <View
             style={
                {width:'100%',
                 paddingHorizontal: Spacing * 2,
-                paddingTop: Spacing * 8,
+                paddingTop: Spacing * 6,
                 paddingBottom: Spacing * 5,
                 
               }
@@ -579,7 +579,9 @@ import {
       style={{
         backgroundColor: Colors.background,
         flex:1,
+        paddingBottom:Spacing*6
         }}>
+          <ScrollView style={{flexGrow:1}} showsVerticalScrollIndicator={false}>
         <View
             style={styles.contentContainer}
         
@@ -705,6 +707,7 @@ import {
           </View>
 
         </View>
+        </ScrollView>
 
       </SafeAreaView>
 
