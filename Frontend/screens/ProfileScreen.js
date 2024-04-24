@@ -20,7 +20,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Spacing from "../constants/Spacing";
 import FontSize from "../constants/FontSize";
 import Colors from "../constants/Colors";
-import Font from "../constants/Fonts";
+import Fonts from "../constants/Fonts";
 import { Ionicons } from "@expo/vector-icons";
 import AppTextInput from "../components/AppTextInput";
 import api from "../config/api/index";
@@ -73,7 +73,7 @@ const ProfileScreen = () => {
           style={{
             fontSize: FontSize.medium,
             color: Colors.text,
-            fontFamily: Font["poppins-regular"],
+            fontFamily: Fonts["poppins-regular"],
             textAlign: "left",
             marginTop: Spacing * 2,
           }}
@@ -126,7 +126,7 @@ const ProfileScreen = () => {
             style={{
               fontSize: FontSize.xLarge,
               color: Colors.text,
-              fontFamily: Font["poppins-semiBold"],
+              fontFamily: Fonts["poppins-semiBold"],
             }}
           >
             {userData.name}
@@ -142,7 +142,7 @@ const ProfileScreen = () => {
           <TouchableOpacity style={styles.Logout_btn} onPress={handleLogout}>
             <Text
               style={{
-                fontFamily: Font["poppins-bold"],
+                fontFamily: Fonts["poppins-bold"],
                 color: Colors.onPrimary,
                 textAlign: "center",
                 fontSize: FontSize.medium,
@@ -418,7 +418,7 @@ const Password_chg = () => {
           <TouchableOpacity style={styles.saveButton} onPress={pass_chng}>
             <Text
               style={{
-                fontFamily: Font["poppins-bold"],
+                fontFamily: Fonts["poppins-bold"],
                 color: Colors.onPrimary,
                 textAlign: "center",
                 fontSize: FontSize.medium,
@@ -510,7 +510,7 @@ const Goals = () => {
                 style={{
                   fontSize: FontSize.xxLarge,
                   color: Colors.primary,
-                  fontFamily: Font["poppins-regular"],
+                  fontFamily: Fonts["poppins-regular"],
                 }}
               >
                 {userData.goals.dailyStepsGoal.toString()}
@@ -542,7 +542,7 @@ const Goals = () => {
                 style={{
                   fontSize: FontSize.xxLarge,
                   color: Colors.primary,
-                  fontFamily: Font["poppins-regular"],
+                  fontFamily: Fonts["poppins-regular"],
                   textAlign: "center",
 
                   paddingBottom: Spacing * 2,
@@ -571,7 +571,7 @@ const Goals = () => {
             <TouchableOpacity style={styles.saveButton} onPress={goal_chng}>
               <Text
                 style={{
-                  fontFamily: Font["poppins-bold"],
+                  fontFamily: Fonts["poppins-bold"],
                   color: Colors.onPrimary,
                   textAlign: "center",
                   fontSize: FontSize.medium,
@@ -719,14 +719,14 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     fontSize: FontSize.xLarge,
     color: Colors.primary,
-    fontFamily: Font["poppins-bold"],
+    fontFamily: Fonts["poppins-bold"],
     marginBottom: Spacing * 3,
   },
   titlev2: {
     alignSelf: "center",
     fontSize: FontSize.xLarge,
     color: Colors.primary,
-    fontFamily: Font["poppins-bold"],
+    fontFamily: Fonts["poppins-bold"],
     marginBottom: Spacing * 3,
   },
   infoContainer: {
@@ -770,7 +770,7 @@ const styles = StyleSheet.create({
     shadowRadius: Spacing,
   },
   saveButtonText: {
-    fontFamily: Font["poppins-bold"],
+    fontFamily: Fonts["poppins-bold"],
     color: Colors.onPrimary,
     textAlign: "center",
     fontSize: FontSize.medium,
@@ -778,7 +778,7 @@ const styles = StyleSheet.create({
   personal_txt: {
     fontSize: FontSize.small,
     color: Colors.primary,
-    fontFamily: Font["poppins-regular"],
+    fontFamily: Fonts["poppins-regular"],
   },
 
   Logout_btn: {
@@ -823,7 +823,7 @@ const App = () => {
           headerStyle: { backgroundColor: Colors.background },
           headerTitleStyle: {
             paddingTop: 5,
-            fontFamily: Font["poppins-regular"],
+            fontFamily: Fonts["poppins-regular"],
             color: Colors.onPrimary,
           },
           headerTintColor: "grey",

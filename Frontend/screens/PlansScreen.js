@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, FlatList, ScrollView } from 'react-native';
+import React, { useState, useEffect,useCallback } from 'react';
+import { View, Text,TextInput,Alert, StyleSheet,Button, Image, TouchableOpacity, SafeAreaView, FlatList, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Colors from '../constants/Colors';
@@ -8,6 +8,9 @@ import Fonts from '../constants/Fonts';
 import FontSize from '../constants/FontSize';
 import api from "../config/api/index";
 import Animated, {FadeInUp,FadeInDown, FadeInRight , FadeInLeft} from 'react-native-reanimated';
+import AppTextInput from '../components/AppTextInput';
+import { useContext } from "react";
+import { UserContext } from "../config/global/UserContext";
 
 
 const Stack = createStackNavigator();
@@ -15,7 +18,10 @@ const Stack = createStackNavigator();
 
 const PlansScreen = () => {
   const navigation = useNavigation();
+  const { userData, updateUser } = useContext(UserContext);
   const [mealPlans, setMealPlans] = useState([]);
+
+  const [customPlans, setCustomPlans] = useState([]);
   const [workoutPlans, setWorkoutPlans] = useState([]);
 
   const fetchMealPlans = async () => {
@@ -28,6 +34,18 @@ const PlansScreen = () => {
       console.error('Error fetching meal plans:', error);
     }
   };
+  const fetchCustomPlans = async () => {
+    try {
+      const response = await api.get('/custom_plans', {
+        params: { email: userData.email }
+      });
+      const data = await response.data;
+      setCustomPlans(data);
+    } catch (error) {
+      console.error('Error fetching custom plans:', error);
+    }
+  };
+  
 
   const fetchWorkoutPlans = async () => {
     try {
@@ -42,6 +60,7 @@ const PlansScreen = () => {
   useEffect(() => {
     fetchMealPlans();
     fetchWorkoutPlans();
+    fetchCustomPlans();
   }, []);
 
   const [filter, setFilter] = useState('All Plans');
@@ -112,12 +131,372 @@ const PlansScreen = () => {
   };
 
 
+  const CreatePlanScreen = () => {
+    const { userData, updateUser } = useContext(UserContext);
+    const [planType, setPlanType] = useState('meal'); // Default to meal plan
+
+    const [mealPlan, setMealPlan] = useState({
+      title: '',
+      description: '',
+      details: '',
+      image:'',
+      meals: [{
+        day: 'Monday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Tuesday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Wednesday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Thursday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Friday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Saturday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      },
+      {
+        day: 'Sunday',
+        breakfast: '',
+        lunch: '',
+        dinner: '',
+        snacks: ''
+      }]
+    });
+
+  const [workoutPlan, setWorkoutPlan] = useState({
+    title: '',
+    description: '',
+    details: '',
+    image:'',
+    workouts: [{
+      day: 'Monday',
+      exercises: [{ name: '', duration: '' }]},
+      {day: 'Tuesday',
+      exercises: [{ name: '', duration: '' }]},
+      {day: 'Wednesday',
+      exercises: [{ name: '', duration: '' }]},
+      {day: 'Thursday',
+      exercises: [{ name: '', duration: '' }]},
+      {day: 'Friday',
+      exercises: [{ name: '', duration: '' }]},
+      {day: 'Saturday',
+      exercises: [{ name: '', duration: '' }]},
+    ]
+  });
+
+  const handlePlanTypeChange = (value) => {
+    setPlanType(value);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await api.post('/create_plan', { email:userData.email, planType,mealPlan,workoutPlan });
+      console.log(response.data)
+      if (response.status === 200) {
+        // Successful login
+        const data = response.data;
+        navigation.navigate('MainPlans');
+      } else {
+        // Other error occurred
+        console.log('Add plan failed');
+        Alert.alert('Error', 'Adding failed. Please try again.');
+      }
+    } catch (error) {
+      if (error.response) {
+        // Request was made and server responded with an error status code
+        const errorMessage = error.response.data.message;
+        Alert.alert('Error', errorMessage);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('Error', 'No response from the server. Please try again.');
+      } else {
+        // Other error occurred
+        Alert.alert('Error', 'Adding failed. Please try again.');
+      }
+    }
+  };
+  
+
+  const addExercise = (dayIndex) => {
+    const newWorkoutPlan = { ...workoutPlan };
+    newWorkoutPlan.workouts[dayIndex].exercises.push({ name: '', duration: '' });
+    setWorkoutPlan(newWorkoutPlan);
+  };
+
+  const renderMealPlanFields = () => {
+    
+    return (
+      <>
+        <Text style={styles.label}>Title:</Text>
+        <AppTextInput
+          value={mealPlan.title}
+          onChangeText={(text) => setMealPlan({ ...mealPlan, title: text })}
+          inputMode = 'email-address'
+
+        />
+        <Text style={styles.label}>Description:</Text>
+        <AppTextInput
+          value={mealPlan.description}
+          onChangeText={(text) => setMealPlan({ ...mealPlan, description: text })}
+          inputMode = 'email-address'
+
+        />
+        <Text style={styles.label}>Details:</Text>
+        <AppTextInput
+          value={mealPlan.details}
+          onChangeText={(text) => setMealPlan({ ...mealPlan, details: text })}
+          inputMode = 'email-address'
+
+        />
+        <View style={{ ...styles.separator, marginVertical: Spacing }} />
+
+        <ScrollView>
+          {mealPlan.meals.map((meal, dayIndex) => (
+            <View key={dayIndex}>
+              <Text style={styles.dayLabel}>{meal.day}</Text>
+              <Text style={styles.label}>Breakfast:</Text>
+              <AppTextInput
+                value={meal.breakfast}
+                onChangeText={(text) => {
+                  const newMealPlan = { ...mealPlan };
+                  newMealPlan.meals[dayIndex].breakfast = text;
+                  setMealPlan(newMealPlan);
+                  inputMode = 'email-address'
+
+                }}
+              />
+              <Text style={styles.label}>Lunch:</Text>
+              <AppTextInput
+                value={meal.lunch}
+                onChangeText={(text) => {
+                  const newMealPlan = { ...mealPlan };
+                  newMealPlan.meals[dayIndex].lunch = text;
+                  setMealPlan(newMealPlan);
+                  inputMode = 'email-address'
+
+                }}
+              />
+              <Text style={styles.label}>Dinner:</Text>
+              <AppTextInput
+                value={meal.dinner}
+                onChangeText={(text) => {
+                  const newMealPlan = { ...mealPlan };
+                  newMealPlan.meals[dayIndex].dinner = text;
+                  setMealPlan(newMealPlan);
+                  inputMode = 'email-address'
+
+                }}
+              />
+              <Text style={styles.label}>Snacks:</Text>
+              <AppTextInput
+                value={meal.snacks}
+                onChangeText={(text) => {
+                  const newMealPlan = { ...mealPlan };
+                  newMealPlan.meals[dayIndex].snacks = text;
+                  setMealPlan(newMealPlan);
+                  inputMode = 'email-address'
+                }}
+              />
+              <View style={{ ...styles.separator, marginBottom: Spacing }} />
+
+            </View>
+            
+          ))}
+        </ScrollView>
+      </>
+    );
+  };
+
+  const renderWorkoutPlanFields = () => {
+    return (
+      <>
+        <Text style={styles.label}>Title:</Text>
+        <AppTextInput
+          value={workoutPlan.title}
+          onChangeText={(text) => setWorkoutPlan({ ...workoutPlan, title: text })}
+          inputMode="email-address"
+        />
+        <Text style={styles.label}>Description:</Text>
+        <AppTextInput
+          value={workoutPlan.description}
+          onChangeText={(text) => setWorkoutPlan({ ...workoutPlan, description: text })}
+          inputMode="email-address"
+        />
+        <Text style={styles.label}>Details:</Text>
+        <AppTextInput
+          value={workoutPlan.details}
+          onChangeText={(text) => setWorkoutPlan({ ...workoutPlan, details: text })}
+          inputMode="email-address"
+        />
+        <View style={{ ...styles.separator, marginVertical: Spacing }} />
+
+        <ScrollView>
+          {workoutPlan.workouts.map((workout, dayIndex) => (
+            <View key={dayIndex}>
+              <Text style={styles.dayLabel}>{workout.day}</Text>
+              {workout.exercises.map((exercise, exerciseIndex) => (
+                <View key={exerciseIndex}>
+                  <Text style={styles.label}>Exercise {exerciseIndex + 1}</Text>
+                  <AppTextInput
+                    value={exercise.name}
+                    placeholder='Name'
+                    onChangeText={(text) => {
+                      const newWorkoutPlan = { ...workoutPlan };
+                      newWorkoutPlan.workouts[dayIndex].exercises[exerciseIndex].name = text;
+                      setWorkoutPlan(newWorkoutPlan);
+                    }}
+                    inputMode="email-address"
+                  />
+                  <Text style={styles.label}>Duration:</Text>
+                  <AppTextInput
+                    value={exercise.sets}
+                    placeholder='Time or Sets & Reps'
+                    onChangeText={(text) => {
+                      const newWorkoutPlan = { ...workoutPlan };
+                      newWorkoutPlan.workouts[dayIndex].exercises[exerciseIndex].sets = text;
+                      setWorkoutPlan(newWorkoutPlan);
+                    }}
+                    inputMode="email-address"
+
+                  />
+                  
+                </View>
+              ))}
+              <TouchableOpacity style={styles.addExercise} onPress={() => addExercise(dayIndex)}>
+                <Text style={styles.addExerciseText}>+ Add Exercise</Text>
+              </TouchableOpacity>
+              <View style={{ ...styles.separator, marginBottom: Spacing }} />
+            </View>
+            
+          ))}
+        </ScrollView>
+      </>
+    );
+  };
+
+ 
+
+  return (
+    <View style={{flex: 1,
+      backgroundColor: Colors.background,
+    paddingHorizontal: Spacing *2,
+    paddingTop: Spacing * 3,}}>
+      <Text style={styles.heading}>Create Plan</Text>
+      <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
+        <View style={styles.form}>
+          <Text style={styles.label}>Select Plan Type:</Text>
+          <View
+          style={{
+            paddingHorizontal: Spacing,
+            paddingVertical: Spacing * 2,
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => handlePlanTypeChange('meal')}
+            style={{
+              backgroundColor: planType === 'meal' ? Colors.primary: Colors.accent,
+              paddingVertical: Spacing ,
+              paddingHorizontal: Spacing ,
+              width: "40%",
+              borderRadius: Spacing,
+              shadowColor: Colors.primary,
+              shadowOffset: {
+                width: 0,
+                height: Spacing,
+              },
+              shadowOpacity: 0.3,
+              elevation:1,
+              shadowRadius: Spacing,
+              marginRight: 20
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: Fonts["poppins-semiBold"],
+                color: Colors.onPrimary,
+                fontSize: FontSize.large,
+                textAlign: "center",
+              }}
+            >
+              Meal Plan
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handlePlanTypeChange('workout')}
+            style={{
+              backgroundColor: planType === 'workout' ? Colors.primary: Colors.accent,
+              paddingVertical: Spacing ,
+              paddingHorizontal: Spacing ,
+              width: "50%",
+              borderRadius: Spacing,
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: Fonts["poppins-semiBold"],
+                color: Colors.text,
+                fontSize: FontSize.large,
+                textAlign: "center",
+              }}
+            >
+              Workout Plan
+            </Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity onPress={() => handlePlanTypeChange('meal')}>
+            <Text style={[styles.planType, planType === 'meal' && styles.activePlan]}>Meal Plan</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => handlePlanTypeChange('workout')}>
+            <Text style={[styles.planType, planType === 'workout' && styles.activePlan]}>Workout Plan</Text>
+          </TouchableOpacity> */}
+          </View>
+          <View style={{ ...styles.separator, marginBottom: Spacing }} />
+          {planType === 'meal' ? renderMealPlanFields() : renderWorkoutPlanFields()}
+          <TouchableOpacity onPress={handleSubmit} style={styles.submitButton}>
+            <Text style={styles.submitText}>Create Plan</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
+
   const PlansListScreen = () => {
-    const allPlans = [...mealPlans, ...workoutPlans];
+    const allPlans = [...mealPlans, ...workoutPlans,...customPlans];
 
     const filteredPlans = filter === 'All Plans' ? allPlans :
       filter === 'Meal Plans' ? mealPlans :
-      workoutPlans;
+      filter === 'Workout Plans' ? workoutPlans:
+      customPlans;
 
     const renderPlan = ({ item }) => (
       <Animated.View entering={FadeInDown.delay(400).duration(500)} exiting={FadeInUp.delay(400).duration(500)}>
@@ -137,35 +516,42 @@ const PlansScreen = () => {
         // justifyContent:'center'
       }}>
       <View style={styles.container}>
+      <View style={{flexDirection:"row",justifyContent:"space-between"}}>
         <Text style={styles.heading}>Plans</Text>
+        <TouchableOpacity
+            style={styles.addButton}
+            onPress={() => navigation.navigate('Create Plan')}
+          >
+            <Text style={styles.addButtonText}>+ Create Plan</Text>
+          </TouchableOpacity>
+      </View>
 
         <View style={{ ...styles.separator, marginBottom: Spacing * 1.5 }} />
-        <View style={styles.filterContainer}>
-          <TouchableOpacity
-            style={[styles.filterButton, filter === 'All Plans' && styles.activeFilterButton]}
-            onPress={() => setFilter('All Plans')}
-          >
-            <Text style={[styles.filterButtonText, filter === 'All Plans' && styles.activeFilterButtonText]}>
-              All Plans
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.filterButton, filter === 'Meal Plans' && styles.activeFilterButton]}
-            onPress={() => setFilter('Meal Plans')}
-          >
-            <Text style={[styles.filterButtonText, filter === 'Meal Plans' && styles.activeFilterButtonText]}>
-              Meal Plans
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.filterButton, filter === 'Workout Plans' && styles.activeFilterButton]}
-            onPress={() => setFilter('Workout Plans')}
-          >
-            <Text style={[styles.filterButtonText, filter === 'Workout Plans' && styles.activeFilterButtonText]}>
-              Workout Plans
-            </Text>
-          </TouchableOpacity>
-        </View>
+              <View style={styles.filterContainer}>
+        <FlatList
+          data={['All Plans', 'Meal Plans', 'Workout Plans', 'My Plans']}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={[styles.filterButton, filter === item && styles.activeFilterButton]}
+              onPress={() => {
+                setFilter(item);
+                if (item === 'Workout Plans') {
+                  fetchWorkoutPlans();
+                } else {
+                  fetchCustomPlans();
+                }
+              }}
+            >
+              <Text style={[styles.filterButtonText, filter === item && styles.activeFilterButtonText]}>
+                {item}
+              </Text>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
         <View style={styles.contentcontainer}>
         <FlatList
           data={filteredPlans}
@@ -178,6 +564,8 @@ const PlansScreen = () => {
       </SafeAreaView>
     );
   };
+
+  
 
   return (
     <SafeAreaView style={{flex: 1,
@@ -203,6 +591,11 @@ const PlansScreen = () => {
             },
             headerTitleAlign: 'left',
           }}
+        />
+        <Stack.Screen
+          name="Create Plan"
+          component={CreatePlanScreen}
+          options={{title:'Create Plan',headerStyle:{backgroundColor:Colors.background,},headerTitleStyle:{paddingTop:5,fontFamily:Fonts['poppins-regular'],color:Colors.onPrimary},headerTintColor: 'grey',headerStatusBarHeight:Spacing,tabBarVisible: false}}
         />
       </Stack.Navigator>
       </SafeAreaView>
@@ -232,12 +625,32 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: Spacing
   },
+  addButton: {
+    height: Spacing*4,
+    flexDirection:'row',
+    alignItems:'center',
+    padding: 8,
+    borderRadius: 8,
+    backgroundColor: Colors.primary
+  },
+  addButtonText: {
+    fontFamily: Fonts["poppins-bold"],
+    fontSize: FontSize.medium,
+    color: Colors.onPrimary,
+  },
   heading: {
     fontFamily: Fonts["poppins-bold"],
     fontSize: FontSize.xLarge,
     color: Colors.primary,
     // paddingHorizontal:Spacing*1.6,
     marginBottom: Spacing * 1.6,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: Colors.accent,
+    borderRadius: 8,
+    padding: Spacing,
+    marginBottom: Spacing,
   },
   filterContainer: {
     flexDirection: 'row',
@@ -427,6 +840,89 @@ const styles = StyleSheet.create({
     fontSize: FontSize.small,
     marginBottom: 8,
   },
+  button: {
+    backgroundColor: Colors.primary,
+    borderRadius: 8,
+    paddingVertical: Spacing,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontFamily: Fonts['poppins-bold'],
+    fontSize: FontSize.medium,
+    color: Colors.onPrimary,
+  },
+  scrollContainer: {
+    flex: 1,
+  },
+  scrollContent: {
+    paddingTop: 20,
+    paddingBottom: 50, // Adjust as needed to prevent content from being hidden by the footer
+  },
+
+  form: {
+    flex: 1,
+  },
+  label: {
+    fontSize: FontSize.medium,
+    color: Colors.primary,
+    fontFamily: Fonts["poppins-regular"],
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+  },
+  planType: {
+    fontSize: 16,
+    marginBottom: 10,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+  },
+  activePlan: {
+    backgroundColor: '#e6f7ff',
+  },
+  dayLabel: {
+    fontSize: FontSize.large,
+    color: Colors.onPrimary,
+    fontFamily: Fonts["poppins-bold"],
+    marginTop: 20,
+    marginBottom: 10,
+  },
+  addExercise: {
+    padding: 8,
+    borderRadius: 8,
+    alignSelf: 'flex-start',
+  },
+  addExerciseText: {
+    fontFamily: Fonts["poppins-bold"],
+    fontSize: FontSize.small,
+    color: Colors.primary,
+  },
+  submitButton: {
+    padding: Spacing * 1.5,
+    height: Spacing * 6,
+    backgroundColor: Colors.primary,
+    marginVertical: Spacing * 1,
+    borderRadius: Spacing,
+    shadowColor: Colors.primary,
+    shadowOffset: {
+      width: 0,
+      height: Spacing,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: Spacing,
+  },
+  submitText: {
+    fontFamily: Fonts["poppins-bold"],
+    color: Colors.onPrimary,
+    textAlign: "center",
+    fontSize: FontSize.large,
+  },
+
 });
 
 export default PlansScreen;

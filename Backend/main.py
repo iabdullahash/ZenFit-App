@@ -303,7 +303,51 @@ def calories_goal_chg():
     return jsonify({'message': 'Goals Changed Successfully','result': upd_user}) 
                    
             
+@app.route('/api/create_plan', methods=['POST'])
+def create_plan():
+    data = load_data()
+    users = data.get('users', [])
+    user_email = request.json.get('email') 
+    mealPlan = request.json.get("mealPlan")
+    workoutPlan = request.json.get("workoutPlan")
 
+    for user in users:
+        if user['email'] == user_email:
+            if request.json.get('planType') == 'meal':
+                mealPlan['image'] = "https://images.unsplash.com/photo-1576866209830-589e1bfbaa4d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                user['customPlans'].append(mealPlan)
+                data['users'] = users 
+                save_data(data)
+                return jsonify({'message': 'Plan created successfully'}), 200
+            elif request.json.get('planType') == 'workout':
+                workoutPlan['image'] = "https://images.unsplash.com/photo-1562771242-a02d9090c90c?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                user['customPlans'].append(workoutPlan)
+                data['users'] = users 
+                save_data(data)
+                return jsonify({'message': 'Plan created successfully'}), 200
+
+    return jsonify({'Error': 'No data found'}), 404
+
+        
+
+@app.route("/api/custom_plans", methods=["GET",'POST'])
+def get_custom_plan():
+
+    data = load_data()
+    users = data.get('users', [])
+    user_email = request.args.get('email')
+
+
+    for user in users:
+        if user['email'] == user_email:
+            custom_plans = user["customPlans"]
+            return jsonify(custom_plans)
+
+    return jsonify({'Error': 'No plans found'}), 404
+    
+
+    
+    
 
  
   
