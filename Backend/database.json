@@ -1,1575 +1,1516 @@
 {
-    "users": [
+  "users": [
+    {
+      "name": "Fapo",
+      "email": "Fapo@gmail.com",
+      "password": "Fapochan123",
+      "gender": "Female",
+      "avatar": "https://imgur.com/KAuW5Hw.png",
+      "weight": {
+        "amount": "40",
+        "unit": "kg"
+      },
+      "height": 160,
+      "age": 15,
+      "goals": {
+        "requiredCalories": 2285,
+        "dailyStepsGoal": 4971,
+        "dailyCalorieBurnGoal": 435
+      },
+      "googleAuthKey": "http://935642738467-0r27k9ie48iif7pvgm7jtk4duevgmhah.apps.googleusercontent.com/",
+      "meals": {
+        "breakfast": [],
+        "lunch": [
+          {
+            "info": {
+              "brand_name": "M&M Meat Shops",
+              "food_description": "Per 4 pieces - Calories: 170kcal | Fat: 5.00g | Carbs: 26.00g | Protein: 4.00g",
+              "food_id": "30612",
+              "food_name": "Vegetable Spring Rolls",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/mandm-meat-shops/vegetable-spring-rolls"
+            },
+            "quantity": 1
+          }
+        ],
+        "dinner": [
+          {
+            "info": {
+              "brand_name": "Freshly",
+              "food_description": "Per 1 tray - Calories: 440kcal | Fat: 17.00g | Carbs: 44.00g | Protein: 31.00g",
+              "food_id": "42202336",
+              "food_name": "Truffled Mushroom Steak",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/freshly/truffled-mushroom-steak"
+            },
+            "quantity": 1
+          }
+        ],
+        "snacks": [
+          {
+            "info": {
+              "brand_name": "Lay's",
+              "food_description": "Per 15 chips - Calories: 160kcal | Fat: 10.00g | Carbs: 15.00g | Protein: 2.00g",
+              "food_id": "46031975",
+              "food_name": "Classic Potato Chips",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/lays/classic-potato-chips"
+            },
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "xyz@gmail.com",
+      "email": "xyz",
+      "password": "xyz890",
+      "gender": "Male",
+      "avatar": "https://imgur.com/kT0N7Fd.png",
+      "weight": {
+        "amount": "52",
+        "unit": "kg"
+      },
+      "height": 150,
+      "age": 20,
+      "goals": {
+        "requiredCalories": 1676,
+        "dailyStepsGoal": 10000,
+        "dailyCalorieBurnGoal": 880
+      },
+      "googleAuthKey": "http://935642738467-0r27k9ie48iif7pvgm7jtk4duevgmhah.apps.googleusercontent.com/",
+      "meals": {
+        "breakfast": [],
+        "lunch": [],
+        "dinner": [],
+        "snacks": []
+      }
+    },
+    {
+      "name": "Abdullah",
+      "email": "abcd@gmail.com",
+      "password": "12345678",
+      "gender": "Male",
+      "avatar": "https://imgur.com/Oa3ppQj.png",
+      "weight": {
+        "amount": "59",
+        "unit": "kg"
+      },
+      "height": 161,
+      "age": 18,
+      "goals": {
+        "requiredCalories": 1873,
+        "dailyStepsGoal": 5000,
+        "dailyCalorieBurnGoal": 645
+      },
+      "googleAuthKey": "http://935642738467-0r27k9ie48iif7pvgm7jtk4duevgmhah.apps.googleusercontent.com/",
+      "meals": {
+        "breakfast": [
+          {
+            "info": {
+              "brand_name": "Spar",
+              "food_description": "Per 1 serving - Calories: 174kcal | Fat: 9.50g | Carbs: 18.00g | Protein: 3.70g",
+              "food_id": "36342632",
+              "food_name": "Roti",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/spar/roti"
+            },
+            "quantity": 1
+          },
+          {
+            "info": {
+              "food_description": "Per 101g - Calories: 197kcal | Fat: 7.79g | Carbs: 0.00g | Protein: 29.80g",
+              "food_id": "1641",
+              "food_name": "Chicken Breast",
+              "food_type": "Generic",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/generic/chicken-breast-ns-as-to-skin-eaten"
+            },
+            "quantity": 2
+          }
+        ],
+        "lunch": [
+          {
+            "info": {
+              "food_description": "Per 101g - Calories: 102kcal | Fat: 1.78g | Carbs: 0.00g | Protein: 20.20g",
+              "food_id": "2148",
+              "food_name": "Crab",
+              "food_type": "Generic",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/generic/crab-cooked"
+            },
+            "quantity": 3
+          }
+        ],
+        "dinner": [
+          {
+            "info": {
+              "brand_name": "Bombay Kitchen",
+              "food_description": "Per 5 oz - Calories: 255kcal | Fat: 13.00g | Carbs: 23.00g | Protein: 13.00g",
+              "food_id": "23774653",
+              "food_name": "Chicken Biryani",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/bombay-kitchen/chicken-biryani"
+            },
+            "quantity": 2
+          }
+        ],
+        "snacks": [
+          {
+            "info": {
+              "brand_name": "Lay's",
+              "food_description": "Per 15 chips - Calories: 160kcal | Fat: 10.00g | Carbs: 15.00g | Protein: 2.00g",
+              "food_id": "46031975",
+              "food_name": "Classic Potato Chips",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/lays/classic-potato-chips"
+            },
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "Muni",
+      "email": "muni@gmail.com",
+      "password": "123",
+      "gender": "Male",
+      "avatar": "https://imgur.com/SydPQWs.png",
+      "weight": {
+        "amount": "49",
+        "unit": "kg"
+      },
+      "height": 174,
+      "age": 20,
+      "goals": {
+        "requiredCalories": 1770,
+        "dailyStepsGoal": 10000,
+        "dailyCalorieBurnGoal": 880
+      },
+      "googleAuthKey": "http://935642738467-0r27k9ie48iif7pvgm7jtk4duevgmhah.apps.googleusercontent.com/",
+      "meals": {
+        "breakfast": [],
+        "lunch": [],
+        "dinner": [],
+        "snacks": []
+      }
+    },
+    {
+      "name": "Muni",
+      "email": "Muni@gmail.com",
+      "password": "123",
+      "gender": "Male",
+      "avatar": "https://imgur.com/qikmctK.png",
+      "weight": {
+        "amount": "53",
+        "unit": "kg"
+      },
+      "height": 175,
+      "age": 20,
+      "goals": {
+        "requiredCalories": 1842,
+        "dailyStepsGoal": 10000,
+        "dailyCalorieBurnGoal": 880
+      },
+      "googleAuthKey": "http://935642738467-0r27k9ie48iif7pvgm7jtk4duevgmhah.apps.googleusercontent.com/",
+      "meals": {
+        "breakfast": [],
+        "lunch": [],
+        "dinner": [],
+        "snacks": [
+          {
+            "info": {
+              "brand_name": "Bombay Kitchen",
+              "food_description": "Per 5 oz - Calories: 255kcal | Fat: 13.00g | Carbs: 23.00g | Protein: 13.00g",
+              "food_id": "23774653",
+              "food_name": "Chicken Biryani",
+              "food_type": "Brand",
+              "food_url": "https://www.fatsecret.com/calories-nutrition/bombay-kitchen/chicken-biryani"
+            },
+            "quantity": 5
+          }
+        ]
+      }
+    }
+  ],
+  "avatars": [
+    {
+      "id": 1,
+      "type": "Male",
+      "url": "https://imgur.com/Oa3ppQj.png"
+    },
+    {
+      "id": 2,
+      "type": "Male",
+      "url": "https://imgur.com/Wv0PNE3.png"
+    },
+    {
+      "id": 3,
+      "type": "Male",
+      "url": "https://imgur.com/u98empZ.png"
+    },
+    {
+      "id": 4,
+      "type": "Male",
+      "url": "https://imgur.com/hai1q6J.png"
+    },
+    {
+      "id": 5,
+      "type": "Male",
+      "url": "https://imgur.com/JIl82vE.png"
+    },
+    {
+      "id": 6,
+      "type": "Male",
+      "url": "https://imgur.com/GngDcYE.png"
+    },
+    {
+      "id": 7,
+      "type": "Male",
+      "url": "https://imgur.com/mfIAW3A.png"
+    },
+    {
+      "id": 8,
+      "type": "Male",
+      "url": "https://imgur.com/ttFHoO8.png"
+    },
+    {
+      "id": 9,
+      "type": "Male",
+      "url": "https://imgur.com/GdrQsQy.png"
+    },
+    {
+      "id": 10,
+      "type": "Male",
+      "url": "https://imgur.com/wu5Ws2u.png"
+    },
+    {
+      "id": 11,
+      "type": "Male",
+      "url": "https://imgur.com/9rldfWT.png"
+    },
+    {
+      "id": 12,
+      "type": "Male",
+      "url": "https://imgur.com/m8H8joE.png"
+    },
+    {
+      "id": 13,
+      "type": "Male",
+      "url": "https://imgur.com/DGyj5L4.png"
+    },
+    {
+      "id": 14,
+      "type": "Male",
+      "url": "https://imgur.com/OsuMEvl.png"
+    },
+    {
+      "id": 15,
+      "type": "Male",
+      "url": "https://imgur.com/ERl14fD.png"
+    },
+    {
+      "id": 16,
+      "type": "Female",
+      "url": "https://imgur.com/PpLnhXC.png"
+    },
+    {
+      "id": 17,
+      "type": "Female",
+      "url": "https://imgur.com/xTsItTh.png"
+    },
+    {
+      "id": 18,
+      "type": "Female",
+      "url": "https://imgur.com/WZhbQaX.png"
+    },
+    {
+      "id": 19,
+      "type": "Female",
+      "url": "https://imgur.com/FRL6mOj.png"
+    },
+    {
+      "id": 20,
+      "type": "Female",
+      "url": "https://imgur.com/ZgungmE.png"
+    },
+    {
+      "id": 21,
+      "type": "Female",
+      "url": "https://imgur.com/V05QmzC.png"
+    },
+    {
+      "id": 22,
+      "type": "Female",
+      "url": "https://imgur.com/dyH27US.png"
+    },
+    {
+      "id": 23,
+      "type": "Female",
+      "url": "https://imgur.com/LzgYjYS.png"
+    },
+    {
+      "id": 24,
+      "type": "Female",
+      "url": "https://imgur.com/JRgis1Z.png"
+    }
+  ],
+  "workoutPlans": [
+    {
+      "id": 1,
+      "title": "Strength Training for Beginners",
+      "description": "A comprehensive strength training program for beginners.",
+      "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya291dHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "details": "This workout plan is designed for individuals who are new to strength training and want to build a foundation of strength. The plan consists of three strength training sessions per week, with each session focusing on different muscle groups.",
+      "workouts": [
         {
-            "name": "Fapo",
-            "email": "Fapo@gmail.com",
-            "password": "Fapochan123",
-            "gender": "Female",
-            "avatar": "https://imgtr.ee/images/2023/06/05/bVr21.png",
-            "weight": {
-                "amount": "40",
-                "unit": "kg"
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Squat",
+              "sets": 3,
+              "reps": 8
             },
-            "height": 160,
-            "age": 15,
-            "goals": {
-                "requiredCalories": 2285,
-                "dailyStepsGoal": 4971,
-                "dailyCalorieBurnGoal": 435
+            {
+              "name": "Bench Press",
+              "sets": 3,
+              "reps": 8
             },
-            "googleAuthKey": "",
-            "meals": {
-                "breakfast": [],
-                "lunch": [
-                    {
-                        "info": {
-                            "brand_name": "M&M Meat Shops",
-                            "food_description": "Per 4 pieces - Calories: 170kcal | Fat: 5.00g | Carbs: 26.00g | Protein: 4.00g",
-                            "food_id": "30612",
-                            "food_name": "Vegetable Spring Rolls",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/mandm-meat-shops/vegetable-spring-rolls"
-                        },
-                        "quantity": 1
-                    }
-                ],
-                "dinner": [
-                    {
-                        "info": {
-                            "brand_name": "Freshly",
-                            "food_description": "Per 1 tray - Calories: 440kcal | Fat: 17.00g | Carbs: 44.00g | Protein: 31.00g",
-                            "food_id": "42202336",
-                            "food_name": "Truffled Mushroom Steak",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/freshly/truffled-mushroom-steak"
-                        },
-                        "quantity": 1
-                    }
-                ],
-                "snacks": [
-                    {
-                        "info": {
-                            "brand_name": "Lay's",
-                            "food_description": "Per 15 chips - Calories: 160kcal | Fat: 10.00g | Carbs: 15.00g | Protein: 2.00g",
-                            "food_id": "46031975",
-                            "food_name": "Classic Potato Chips",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/lays/classic-potato-chips"
-                        },
-                        "quantity": 1
-                    }
-                ]
+            {
+              "name": "Bent-Over Row",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Lunges",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
             }
+          ]
         },
         {
-            "name": "xyz@gmail.com",
-            "email": "xyz",
-            "password": "xyz890",
-            "gender": "Male",
-            "avatar": "https://imgtr.ee/images/2023/06/05/bVYDD.png",
-            "weight": {
-                "amount": "52",
-                "unit": "kg"
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "Deadlift",
+              "sets": 3,
+              "reps": 6
             },
-            "height": 150,
-            "age": 20,
-            "goals": {
-                "requiredCalories": 1676,
-                "dailyStepsGoal": 10000,
-                "dailyCalorieBurnGoal": 880
+            {
+              "name": "Overhead Press",
+              "sets": 3,
+              "reps": 8
             },
-            "googleAuthKey": "",
-            "meals": {
-                "breakfast": [],
-                "lunch": [],
-                "dinner": [],
-                "snacks": []
+            {
+              "name": "Pull-Ups",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Step-Ups",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Russian Twist",
+              "sets": 3,
+              "reps": 12
             }
+          ]
         },
         {
-            "name": "Abdullah",
-            "email": "abcd@gmail.com",
-            "password": "12345678",
-            "gender": "Male",
-            "avatar": "https://imgtr.ee/images/2023/06/05/bV6xX.png",
-            "weight": {
-                "amount": "59",
-                "unit": "kg"
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Leg Press",
+              "sets": 3,
+              "reps": 10
             },
-            "height": 161,
-            "age": 18,
-            "goals": {
-                "requiredCalories": 1873,
-                "dailyStepsGoal": 5000,
-                "dailyCalorieBurnGoal": 645
+            {
+              "name": "Incline Dumbbell Press",
+              "sets": 3,
+              "reps": 8
             },
-            "googleAuthKey": "",
-            "meals": {
-                "breakfast": [
-                    {
-                        "info": {
-                            "food_description": "Per 100g - Calories: 276kcal | Fat: 11.74g | Carbs: 30.33g | Protein: 12.33g",
-                            "food_id": "4881",
-                            "food_name": "Cheese Pizza",
-                            "food_type": "Generic",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/generic/pizza-cheese"
-                        },
-                        "quantity": 2
-                    },
-                    {
-                        "info": {
-                            "food_description": "Per 101g - Calories: 158kcal | Fat: 0.93g | Carbs: 30.86g | Protein: 5.80g",
-                            "food_id": "285243",
-                            "food_name": "Penne",
-                            "food_type": "Generic",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/generic/penne-cooked"
-                        },
-                        "quantity": 1
-                    }
-                ],
-                "lunch": [
-                    {
-                        "info": {
-                            "food_description": "Per 101g - Calories: 102kcal | Fat: 1.78g | Carbs: 0.00g | Protein: 20.20g",
-                            "food_id": "2148",
-                            "food_name": "Crab",
-                            "food_type": "Generic",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/generic/crab-cooked"
-                        },
-                        "quantity": 3
-                    }
-                ],
-                "dinner": [
-                    {
-                        "info": {
-                            "brand_name": "Bombay Kitchen",
-                            "food_description": "Per 5 oz - Calories: 255kcal | Fat: 13.00g | Carbs: 23.00g | Protein: 13.00g",
-                            "food_id": "23774653",
-                            "food_name": "Chicken Biryani",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/bombay-kitchen/chicken-biryani"
-                        },
-                        "quantity": 2
-                    }
-                ],
-                "snacks": [
-                    {
-                        "info": {
-                            "brand_name": "Lay's",
-                            "food_description": "Per 15 chips - Calories: 160kcal | Fat: 10.00g | Carbs: 15.00g | Protein: 2.00g",
-                            "food_id": "46031975",
-                            "food_name": "Classic Potato Chips",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/lays/classic-potato-chips"
-                        },
-                        "quantity": 1
-                    }
-                ]
+            {
+              "name": "Lat Pulldown",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Hamstring Curl",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Hanging Leg Raise",
+              "sets": 3,
+              "reps": 12
             }
-        },
-        {
-            "name": "Muni",
-            "email": "muni@gmail.com",
-            "password": "123",
-            "gender": "Male",
-            "avatar": "https://imgtr.ee/images/2023/06/05/bVZCM.png",
-            "weight": {
-                "amount": "49",
-                "unit": "kg"
-            },
-            "height": 174,
-            "age": 20,
-            "goals": {
-                "requiredCalories": 1770,
-                "dailyStepsGoal": 10000,
-                "dailyCalorieBurnGoal": 880
-            },
-            "googleAuthKey": "",
-            "meals": {
-                "breakfast": [],
-                "lunch": [],
-                "dinner": [],
-                "snacks": []
-            }
-        },
-        {
-            "name": "Muni",
-            "email": "Muni@gmail.com",
-            "password": "123",
-            "gender": "Male",
-            "avatar": "https://imgtr.ee/images/2023/06/05/bV5m3.png",
-            "weight": {
-                "amount": "53",
-                "unit": "kg"
-            },
-            "height": 175,
-            "age": 20,
-            "goals": {
-                "requiredCalories": 1842,
-                "dailyStepsGoal": 10000,
-                "dailyCalorieBurnGoal": 880
-            },
-            "googleAuthKey": "",
-            "meals": {
-                "breakfast": [],
-                "lunch": [],
-                "dinner": [],
-                "snacks": [
-                    {
-                        "info": {
-                            "brand_name": "Bombay Kitchen",
-                            "food_description": "Per 5 oz - Calories: 255kcal | Fat: 13.00g | Carbs: 23.00g | Protein: 13.00g",
-                            "food_id": "23774653",
-                            "food_name": "Chicken Biryani",
-                            "food_type": "Brand",
-                            "food_url": "https://www.fatsecret.com/calories-nutrition/bombay-kitchen/chicken-biryani"
-                        },
-                        "quantity": 5
-                    }
-                ]
-            }
+          ]
         }
-    ],
-    "avatars": [
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Fat Loss and Toning",
+      "description": "A workout plan to help you burn fat and tone your body.",
+      "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya291dHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "details": "This workout plan is designed to help you lose body fat and sculpt a lean physique. The plan consists of four workout sessions per week, alternating between cardio and strength training.",
+      "workouts": [
         {
-            "id": 1,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVSjn.png"
+          "day": "Monday",
+          "type": "Cardio",
+          "exercises": [
+            {
+              "name": "Treadmill Jogging",
+              "duration": "20 minutes"
+            },
+            {
+              "name": "Jumping Jacks",
+              "duration": "3 sets of 30 seconds"
+            },
+            {
+              "name": "Mountain Climbers",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Cycling",
+              "duration": "15 minutes"
+            },
+            {
+              "name": "Burpees",
+              "duration": "3 sets of 10 reps"
+            }
+          ]
         },
         {
-            "id": 2,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bV1xr.png"
+          "day": "Tuesday",
+          "type": "Strength Training",
+          "exercises": [
+            {
+              "name": "Dumbbell Squat",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Push-Ups",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Dumbbell Shoulder Press",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Dumbbell Bent-Over Row",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            }
+          ]
         },
         {
-            "id": 3,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVpyc.png"
+          "day": "Thursday",
+          "type": "Cardio",
+          "exercises": [
+            {
+              "name": "Elliptical Training",
+              "duration": "20 minutes"
+            },
+            {
+              "name": "Jump Rope",
+              "duration": "3 sets of 1 minute"
+            },
+            {
+              "name": "High Knees",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Stair Climbing",
+              "duration": "15 minutes"
+            },
+            {
+              "name": "Mountain Climbers",
+              "duration": "3 sets of 10 reps"
+            }
+          ]
         },
         {
-            "id": 4,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVDmY.png"
-        },
-        {
-            "id": 5,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVKEq.png"
-        },
-        {
-            "id": 6,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVTos.png"
-        },
-        {
-            "id": 7,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVYDD.png"
-        },
-        {
-            "id": 8,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVZCM.png"
-        },
-        {
-            "id": 9,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVmg4.png"
-        },
-        {
-            "id": 10,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVr21.png"
-        },
-        {
-            "id": 11,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bV6xX.png"
-        },
-        {
-            "id": 12,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVLjV.png"
-        },
-        {
-            "id": 13,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVx0l.png"
-        },
-        {
-            "id": 14,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bV5m3.png"
-        },
-        {
-            "id": 15,
-            "type": "Male",
-            "url": "https://imgtr.ee/images/2023/06/05/bVVEL.png"
-        },
-        {
-            "id": 16,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bVAq0.png"
-        },
-        {
-            "id": 17,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bVhDF.png"
-        },
-        {
-            "id": 18,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bV4Cm.png"
-        },
-        {
-            "id": 19,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bVI7U.png"
-        },
-        {
-            "id": 20,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bVe2B.png"
-        },
-        {
-            "id": 21,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bhGoq.png"
-        },
-        {
-            "id": 22,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bhMps.png"
-        },
-        {
-            "id": 23,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bhO4D.png"
-        },
-        {
-            "id": 24,
-            "type": "Female",
-            "url": "https://imgtr.ee/images/2023/06/05/bhRgM.png"
+          "day": "Friday",
+          "type": "Strength Training",
+          "exercises": [
+            {
+              "name": "Barbell Squat",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Barbell Bench Press",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Barbell Deadlift",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Barbell Bent-Over Row",
+              "sets": 3,
+              "reps": 8
+            },
+            {
+              "name": "Russian Twist",
+              "sets": 3,
+              "reps": 12
+            }
+          ]
         }
-    ],
-    "workoutPlans": [
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cardiovascular Workout Plan",
+      "description": "An effective cardio workout plan to improve cardiovascular fitness.",
+      "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvcmtvdXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "details": "This workout plan is designed to improve cardiovascular fitness and burn calories. It includes various cardio exercises that can be done indoors or outdoors. Aim to perform these exercises at a moderate to high intensity for the best results.",
+      "workouts": [
         {
-            "id": 1,
-            "title": "Strength Training for Beginners",
-            "description": "A comprehensive strength training program for beginners.",
-            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya291dHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-            "details": "This workout plan is designed for individuals who are new to strength training and want to build a foundation of strength. The plan consists of three strength training sessions per week, with each session focusing on different muscle groups.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Squat",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Bench Press",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Bent-Over Row",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Lunges",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "Deadlift",
-                            "sets": 3,
-                            "reps": 6
-                        },
-                        {
-                            "name": "Overhead Press",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Pull-Ups",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Step-Ups",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Russian Twist",
-                            "sets": 3,
-                            "reps": 12
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Leg Press",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Incline Dumbbell Press",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Lat Pulldown",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Hamstring Curl",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Hanging Leg Raise",
-                            "sets": 3,
-                            "reps": 12
-                        }
-                    ]
-                }
-            ]
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Running",
+              "duration": "30 minutes"
+            },
+            {
+              "name": "Jumping Jacks",
+              "duration": "3 sets of 30 seconds"
+            },
+            {
+              "name": "Cycling",
+              "duration": "20 minutes"
+            },
+            {
+              "name": "Burpees",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Jump Rope",
+              "duration": "3 sets of 1 minute"
+            }
+          ]
         },
         {
-            "id": 2,
-            "title": "Fat Loss and Toning",
-            "description": "A workout plan to help you burn fat and tone your body.",
-            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d29ya291dHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-            "details": "This workout plan is designed to help you lose body fat and sculpt a lean physique. The plan consists of four workout sessions per week, alternating between cardio and strength training.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "type": "Cardio",
-                    "exercises": [
-                        {
-                            "name": "Treadmill Jogging",
-                            "duration": "20 minutes"
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "duration": "3 sets of 30 seconds"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Cycling",
-                            "duration": "15 minutes"
-                        },
-                        {
-                            "name": "Burpees",
-                            "duration": "3 sets of 10 reps"
-                        }
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "type": "Strength Training",
-                    "exercises": [
-                        {
-                            "name": "Dumbbell Squat",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Push-Ups",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Dumbbell Shoulder Press",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Dumbbell Bent-Over Row",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        }
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "type": "Cardio",
-                    "exercises": [
-                        {
-                            "name": "Elliptical Training",
-                            "duration": "20 minutes"
-                        },
-                        {
-                            "name": "Jump Rope",
-                            "duration": "3 sets of 1 minute"
-                        },
-                        {
-                            "name": "High Knees",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Stair Climbing",
-                            "duration": "15 minutes"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "duration": "3 sets of 10 reps"
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "type": "Strength Training",
-                    "exercises": [
-                        {
-                            "name": "Barbell Squat",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Barbell Bench Press",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Barbell Deadlift",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Barbell Bent-Over Row",
-                            "sets": 3,
-                            "reps": 8
-                        },
-                        {
-                            "name": "Russian Twist",
-                            "sets": 3,
-                            "reps": 12
-                        }
-                    ]
-                }
-            ]
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "High-Intensity Interval Training (HIIT)",
+              "duration": "20 minutes"
+            },
+            {
+              "name": "Mountain Climbers",
+              "duration": "3 sets of 12 reps"
+            },
+            {
+              "name": "Stair Climbing",
+              "duration": "15 minutes"
+            },
+            {
+              "name": "Box Jumps",
+              "duration": "3 sets of 8 reps"
+            },
+            {
+              "name": "Rowing Machine",
+              "duration": "15 minutes"
+            }
+          ]
         },
         {
-            "id": 3,
-            "title": "Cardiovascular Workout Plan",
-            "description": "An effective cardio workout plan to improve cardiovascular fitness.",
-            "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvcmtvdXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-            "details": "This workout plan is designed to improve cardiovascular fitness and burn calories. It includes various cardio exercises that can be done indoors or outdoors. Aim to perform these exercises at a moderate to high intensity for the best results.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Running",
-                            "duration": "30 minutes"
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "duration": "3 sets of 30 seconds"
-                        },
-                        {
-                            "name": "Cycling",
-                            "duration": "20 minutes"
-                        },
-                        {
-                            "name": "Burpees",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Jump Rope",
-                            "duration": "3 sets of 1 minute"
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "High-Intensity Interval Training (HIIT)",
-                            "duration": "20 minutes"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "duration": "3 sets of 12 reps"
-                        },
-                        {
-                            "name": "Stair Climbing",
-                            "duration": "15 minutes"
-                        },
-                        {
-                            "name": "Box Jumps",
-                            "duration": "3 sets of 8 reps"
-                        },
-                        {
-                            "name": "Rowing Machine",
-                            "duration": "15 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Swimming",
-                            "duration": "30 minutes"
-                        },
-                        {
-                            "name": "Sprint Intervals",
-                            "duration": "5 sets of 30 seconds"
-                        },
-                        {
-                            "name": "Jumping Lunges",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Elliptical Machine",
-                            "duration": "20 minutes"
-                        },
-                        {
-                            "name": "Circuit Training",
-                            "duration": "3 sets of 1 minute"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "title": "Flexibility and Mobility Routine",
-            "description": "A stretching and mobility routine to improve flexibility and mobility.",
-            "image": "https://images.unsplash.com/photo-1635367216109-aa3353c0c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fHdvcmtvdXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-            "details": "This routine focuses on improving flexibility and mobility through a variety of stretching exercises. It is suitable for all fitness levels and can be done as a standalone routine or as a warm-up or cool-down for other workouts.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Neck Rolls",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Shoulder Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Chest Opener",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Standing Forward Bend",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Standing Quad Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "Seated Forward Fold",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Butterfly Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Hamstring Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Hip Flexor Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Calf Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Spinal Twist",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Groin Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Tricep Stretch",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Hip Opener",
-                            "sets": 2,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Ankle Mobility",
-                            "sets": 2,
-                            "reps": 10
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "title": "HIIT Workout Plan",
-            "description": "A high-intensity interval training (HIIT) workout plan for maximum calorie burn.",
-            "image": "https://images.unsplash.com/photo-1609096458733-95b38583ac4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-            "details": "This workout plan incorporates high-intensity interval training (HIIT) exercises to maximize calorie burn and improve cardiovascular fitness. HIIT workouts involve short bursts of intense exercise followed by periods of rest or low-intensity activity.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Sprint Intervals",
-                            "duration": "10 sets of 30 seconds sprinting, 30 seconds rest"
-                        },
-                        {
-                            "name": "Burpees",
-                            "duration": "3 sets of 12 reps"
-                        },
-                        {
-                            "name": "Jumping Lunges",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "duration": "3 sets of 20 reps"
-                        },
-                        {
-                            "name": "Plank",
-                            "duration": "3 sets of 30 seconds"
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "Circuit Training",
-                            "duration": "5 sets of 1 minute per exercise with 30 seconds rest"
-                        },
-                        {
-                            "name": "Jump Squats",
-                            "duration": "3 sets of 10 reps"
-                        },
-                        {
-                            "name": "Box Jumps",
-                            "duration": "3 sets of 8 reps"
-                        },
-                        {
-                            "name": "Bicycle Crunches",
-                            "duration": "3 sets of 20 reps"
-                        },
-                        {
-                            "name": "Plank Jacks",
-                            "duration": "3 sets of 12 reps"
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Tabata Intervals",
-                            "duration": "8 sets of 20 seconds high-intensity exercise, 10 seconds rest"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "duration": "3 sets of 20 reps"
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "duration": "3 sets of 30 seconds"
-                        },
-                        {
-                            "name": "High Knees",
-                            "duration": "3 sets of 20 reps"
-                        },
-                        {
-                            "name": "Russian Twist",
-                            "duration": "3 sets of 12 reps"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "title": "Yoga and Meditation Plan",
-            "description": "A yoga and meditation plan for stress relief and relaxation.",
-            "image": "https://images.unsplash.com/photo-1484452330304-377cdeb05340?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80",
-            "details": "This plan combines yoga poses and meditation techniques to promote relaxation, reduce stress, and improve overall well-being. It is suitable for all fitness levels and can be practiced at home or in a yoga studio.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Sun Salutation",
-                            "duration": "3 sets of 12 repetitions"
-                        },
-                        {
-                            "name": "Child's Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Cat-Cow Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Tree Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Corpse Pose (Savasana)",
-                            "duration": "5 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "exercises": [
-                        {
-                            "name": "Seated Forward Bend",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Warrior II Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Bridge Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Legs-Up-the-Wall Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "Triangle Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Camel Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Pigeon Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Child's Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "exercises": [
-                        {
-                            "name": "Chair Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Fish Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Downward Facing Dog",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Happy Baby Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Warrior I Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Extended Triangle Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Child's Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Corpse Pose (Savasana)",
-                            "duration": "5 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Saturday",
-                    "exercises": [
-                        {
-                            "name": "Downward Facing Dog",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Cobra Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Fish Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Seated Forward Bend",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                },
-                {
-                    "day": "Sunday",
-                    "exercises": [
-                        {
-                            "name": "Sun Salutation",
-                            "duration": "3 sets of 12 repetitions"
-                        },
-                        {
-                            "name": "Tree Pose",
-                            "duration": "1 minute per side"
-                        },
-                        {
-                            "name": "Cat-Cow Pose",
-                            "duration": "1 minute"
-                        },
-                        {
-                            "name": "Child's Pose",
-                            "duration": "2 minutes"
-                        },
-                        {
-                            "name": "Meditation",
-                            "duration": "10 minutes"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "title": "Bodyweight Workout Plan",
-            "description": "A workout plan that uses only bodyweight exercises to build strength and endurance.",
-            "image": "https://images.unsplash.com/photo-1598266663439-2056e6900339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-            "details": "This workout plan is designed for individuals who prefer to train using their own bodyweight. It consists of a variety of exercises that target different muscle groups and can be performed anywhere without the need for equipment.",
-            "workouts": [
-                {
-                    "day": "Monday",
-                    "exercises": [
-                        {
-                            "name": "Push-Ups",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Squats",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Lunges",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "sets": 3,
-                            "reps": 12
-                        }
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "exercises": [
-                        {
-                            "name": "Burpees",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "sets": 3,
-                            "reps": 15
-                        },
-                        {
-                            "name": "Chair Dips",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Leg Raises",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        }
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "exercises": [
-                        {
-                            "name": "Push-Ups",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Squats",
-                            "sets": 3,
-                            "reps": 15
-                        },
-                        {
-                            "name": "Jumping Lunges",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "45 seconds"
-                        },
-                        {
-                            "name": "Bicycle Crunches",
-                            "sets": 3,
-                            "reps": 15
-                        }
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "exercises": [
-                        {
-                            "name": "Mountain Climbers",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "sets": 3,
-                            "reps": 15
-                        },
-                        {
-                            "name": "Chair Dips",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Leg Raises",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        }
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "exercises": [
-                        {
-                            "name": "Push-Ups",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Squats",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Lunges",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        },
-                        {
-                            "name": "Mountain Climbers",
-                            "sets": 3,
-                            "reps": 12
-                        }
-                    ]
-                },
-                {
-                    "day": "Saturday",
-                    "exercises": [
-                        {
-                            "name": "Burpees",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Jumping Jacks",
-                            "sets": 3,
-                            "reps": 15
-                        },
-                        {
-                            "name": "Chair Dips",
-                            "sets": 3,
-                            "reps": 10
-                        },
-                        {
-                            "name": "Leg Raises",
-                            "sets": 3,
-                            "reps": 12
-                        },
-                        {
-                            "name": "Plank",
-                            "sets": 3,
-                            "duration": "30 seconds"
-                        }
-                    ]
-                }
-            ]
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Swimming",
+              "duration": "30 minutes"
+            },
+            {
+              "name": "Sprint Intervals",
+              "duration": "5 sets of 30 seconds"
+            },
+            {
+              "name": "Jumping Lunges",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Elliptical Machine",
+              "duration": "20 minutes"
+            },
+            {
+              "name": "Circuit Training",
+              "duration": "3 sets of 1 minute"
+            }
+          ]
         }
-    ],
-    "mealPlans": [
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Flexibility and Mobility Routine",
+      "description": "A stretching and mobility routine to improve flexibility and mobility.",
+      "image": "https://images.unsplash.com/photo-1635367216109-aa3353c0c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fHdvcmtvdXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+      "details": "This routine focuses on improving flexibility and mobility through a variety of stretching exercises. It is suitable for all fitness levels and can be done as a standalone routine or as a warm-up or cool-down for other workouts.",
+      "workouts": [
         {
-            "id": 1,
-            "title": "Healthy Eating Meal Plan",
-            "description": "A balanced and nutritious meal plan for healthy eating.",
-            "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-            "details": "This meal plan is designed to provide a balanced and nutritious diet for overall health and well-being. It includes three main meals and two snacks per day, with a focus on whole foods and portion control.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Oatmeal with berries and a sprinkle of almonds",
-                    "lunch": "Grilled chicken breast with quinoa and steamed vegetables",
-                    "dinner": "Salmon fillet with roasted sweet potatoes and saut\u00c3\u00a9ed spinach",
-                    "snacks": [
-                        "Greek yogurt with mixed nuts",
-                        "Carrot sticks with hummus"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Vegetable omelette with whole grain toast",
-                    "lunch": "Mixed green salad with grilled shrimp and balsamic dressing",
-                    "dinner": "Turkey meatballs with whole wheat pasta and marinara sauce",
-                    "snacks": [
-                        "Apple slices with almond butter",
-                        "Hard-boiled eggs"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Smoothie with spinach, banana, almond milk, and chia seeds",
-                    "lunch": "Quinoa salad with roasted vegetables and feta cheese",
-                    "dinner": "Grilled tofu with brown rice and stir-fried vegetables",
-                    "snacks": [
-                        "Cottage cheese with sliced peaches",
-                        "Trail mix with dried fruits and nuts"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Whole grain toast with avocado and poached eggs",
-                    "lunch": "Chicken and vegetable stir-fry with brown rice",
-                    "dinner": "Baked cod with quinoa and steamed broccoli",
-                    "snacks": [
-                        "Celery sticks with peanut butter",
-                        "Cherry tomatoes with mozzarella"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Yogurt parfait with granola and mixed berries",
-                    "lunch": "Tuna salad wrap with whole wheat tortilla and mixed greens",
-                    "dinner": "Grilled steak with roasted potatoes and grilled asparagus",
-                    "snacks": [
-                        "Mixed fruit salad",
-                        "Rice cakes with almond butter"
-                    ]
-                }
-            ]
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Neck Rolls",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Shoulder Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Chest Opener",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Standing Forward Bend",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Standing Quad Stretch",
+              "sets": 2,
+              "reps": 10
+            }
+          ]
         },
         {
-            "id": 2,
-            "title": "Vegetarian Meal Plan",
-            "description": "A delicious and nutritious meal plan for vegetarians.",
-            "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
-            "details": "This vegetarian meal plan is designed to provide a well-rounded diet without meat. It includes a variety of plant-based proteins, whole grains, fruits, and vegetables to ensure you meet your nutritional needs.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Vegetable scramble with tofu, bell peppers, and spinach",
-                    "lunch": "Chickpea salad with mixed greens, tomatoes, and balsamic dressing",
-                    "dinner": "Lentil curry with brown rice and naan bread",
-                    "snacks": [
-                        "Mixed fruit salad",
-                        "Hummus with carrot sticks"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Avocado toast with whole grain bread and cherry tomatoes",
-                    "lunch": "Quinoa and black bean burrito bowl with salsa and guacamole",
-                    "dinner": "Eggplant Parmesan with whole wheat pasta",
-                    "snacks": [
-                        "Greek yogurt with honey and walnuts",
-                        "Trail mix with dried fruits and nuts"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Spinach and mushroom omelette with whole grain toast",
-                    "lunch": "Roasted vegetable wrap with hummus",
-                    "dinner": "Sweet potato and black bean chili",
-                    "snacks": [
-                        "Apple slices with almond butter",
-                        "Cucumber and tomato salad"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Blueberry and almond smoothie with chia seeds",
-                    "lunch": "Caprese salad with fresh mozzarella, tomatoes, and basil",
-                    "dinner": "Vegetable stir-fry with tofu and brown rice",
-                    "snacks": [
-                        "Cottage cheese with sliced peaches",
-                        "Rice cakes with peanut butter"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Oatmeal with mixed berries and a sprinkle of flaxseeds",
-                    "lunch": "Mediterranean quinoa salad with feta cheese and olives",
-                    "dinner": "Egg fried rice with mixed vegetables",
-                    "snacks": [
-                        "Carrot and celery sticks with hummus",
-                        "Mixed nuts"
-                    ]
-                }
-            ]
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "Seated Forward Fold",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Butterfly Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Hamstring Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Hip Flexor Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Calf Stretch",
+              "sets": 2,
+              "reps": 10
+            }
+          ]
         },
         {
-            "id": 3,
-            "title": "Gluten-Free Meal Plan",
-            "description": "A gluten-free meal plan for individuals with gluten intolerance or sensitivity.",
-            "image": "https://images.unsplash.com/photo-1497888329096-51c27beff665?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lYWwlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-            "details": "This gluten-free meal plan excludes all sources of gluten, such as wheat, barley, and rye. It focuses on naturally gluten-free ingredients and offers a variety of options for breakfast, lunch, dinner, and snacks.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Quinoa porridge with mixed berries and honey",
-                    "lunch": "Grilled chicken salad with mixed greens and lemon vinaigrette",
-                    "dinner": "Grilled salmon with roasted vegetables and quinoa",
-                    "snacks": [
-                        "Rice cakes with almond butter",
-                        "Fresh fruit"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Egg and vegetable scramble with gluten-free toast",
-                    "lunch": "Taco bowl with ground turkey, black beans, and avocado",
-                    "dinner": "Stir-fried shrimp with gluten-free noodles and vegetables",
-                    "snacks": [
-                        "Celery sticks with peanut butter",
-                        "Gluten-free granola bar"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Gluten-free pancakes with maple syrup and sliced bananas",
-                    "lunch": "Quinoa and vegetable stir-fry",
-                    "dinner": "Grilled chicken breast with sweet potato fries and steamed broccoli",
-                    "snacks": [
-                        "Greek yogurt with gluten-free granola",
-                        "Popcorn"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Smoothie bowl with almond milk, spinach, and gluten-free granola",
-                    "lunch": "Salmon and avocado sushi rolls with gluten-free soy sauce",
-                    "dinner": "Baked chicken with quinoa and roasted Brussels sprouts",
-                    "snacks": [
-                        "Rice crackers with hummus",
-                        "Mixed nuts"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Gluten-free oatmeal with sliced peaches and cinnamon",
-                    "lunch": "Chicken and vegetable kebabs with quinoa",
-                    "dinner": "Grilled steak with mashed sweet potatoes and saut\u00c3\u00a9ed asparagus",
-                    "snacks": [
-                        "Carrot sticks with ranch dip",
-                        "Gluten-free pretzels"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "title": "High-Protein Meal Plan",
-            "description": "A meal plan designed to provide a high intake of protein for muscle growth and recovery.",
-            "image": "https://images.unsplash.com/photo-1489391013510-49401c8a3b6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-            "details": "This high-protein meal plan focuses on lean protein sources to support muscle growth and recovery. It includes three main meals and two snacks per day, with an emphasis on incorporating protein-rich foods into each meal.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Scrambled eggs with spinach and smoked salmon",
-                    "lunch": "Grilled chicken breast with quinoa and roasted vegetables",
-                    "dinner": "Grilled salmon with sweet potato mash and steamed asparagus",
-                    "snacks": [
-                        "Greek yogurt with mixed berries and chia seeds",
-                        "Protein shake with almond milk and banana"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Protein pancakes topped with Greek yogurt and sliced almonds",
-                    "lunch": "Tuna salad with mixed greens, chickpeas, and olive oil dressing",
-                    "dinner": "Lean beef stir-fry with brown rice and broccoli",
-                    "snacks": [
-                        "Hard-boiled eggs",
-                        "Protein bar with nuts and seeds"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Omelette with egg whites, turkey bacon, and vegetables",
-                    "lunch": "Grilled chicken salad with quinoa, avocado, and balsamic vinaigrette",
-                    "dinner": "Baked cod with quinoa pilaf and roasted Brussels sprouts",
-                    "snacks": [
-                        "Cottage cheese with pineapple chunks",
-                        "Roasted chickpeas"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Protein smoothie with spinach, almond milk, and peanut butter",
-                    "lunch": "Grilled shrimp with whole wheat pasta and tomato sauce",
-                    "dinner": "Grilled chicken breast with sweet potato fries and green beans",
-                    "snacks": [
-                        "Beef jerky",
-                        "Protein balls with oats and almond butter"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Greek yogurt parfait with granola and mixed berries",
-                    "lunch": "Turkey meatballs with whole wheat pita bread and tzatziki sauce",
-                    "dinner": "Grilled steak with quinoa salad and roasted vegetables",
-                    "snacks": [
-                        "Protein pudding with almond milk and cocoa powder",
-                        "Edamame beans"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "title": "Low-Carb Meal Plan",
-            "description": "A meal plan designed to reduce carbohydrate intake and promote weight loss.",
-            "image": "https://images.unsplash.com/photo-1505714197102-6ae95091ed70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-            "details": "This low-carb meal plan focuses on reducing carbohydrate intake while increasing the consumption of healthy fats and protein. It includes three main meals and two snacks per day, with an emphasis on non-starchy vegetables and lean protein sources.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Spinach and mushroom omelette with feta cheese",
-                    "lunch": "Grilled chicken salad with mixed greens and avocado",
-                    "dinner": "Baked salmon with steamed broccoli and cauliflower rice",
-                    "snacks": [
-                        "Celery sticks with cream cheese",
-                        "Mixed nuts"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Avocado and bacon stuffed mushrooms",
-                    "lunch": "Tuna salad lettuce wraps with cucumber and tomato",
-                    "dinner": "Grilled chicken breast with zucchini noodles and pesto",
-                    "snacks": [
-                        "Hard-boiled eggs",
-                        "Cheese slices"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Chia seed pudding with almond milk and raspberries",
-                    "lunch": "Turkey and avocado roll-ups with lettuce wraps",
-                    "dinner": "Baked cod with roasted Brussels sprouts and lemon butter sauce",
-                    "snacks": [
-                        "Cucumber slices with guacamole",
-                        "Beef jerky"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Baked egg cups with spinach and goat cheese",
-                    "lunch": "Grilled shrimp salad with mixed greens and balsamic vinaigrette",
-                    "dinner": "Grilled chicken breast with roasted asparagus and mashed cauliflower",
-                    "snacks": [
-                        "Almond butter with celery sticks",
-                        "Seaweed snacks"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Vegetable frittata with egg whites and feta cheese",
-                    "lunch": "Salmon salad with mixed greens, olives, and olive oil dressing",
-                    "dinner": "Grilled steak with cauliflower mash and saut\u00c3\u00a9ed mushrooms",
-                    "snacks": [
-                        "Greek yogurt with sugar-free sweetener",
-                        "Pork rinds"
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "title": "Vegan Meal Plan",
-            "description": "A plant-based meal plan suitable for vegans, emphasizing nutrient-rich ingredients.",
-            "image": "https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
-            "details": "This vegan meal plan is designed to provide a well-rounded plant-based diet, rich in nutrients and flavors. It includes three main meals and two snacks per day, with an emphasis on whole grains, legumes, fruits, and vegetables.",
-            "meals": [
-                {
-                    "day": "Monday",
-                    "breakfast": "Vegan protein smoothie with almond milk, banana, and chia seeds",
-                    "lunch": "Chickpea salad with mixed greens, cherry tomatoes, and tahini dressing",
-                    "dinner": "Vegan lentil curry with brown rice",
-                    "snacks": [
-                        "Fresh fruit salad",
-                        "Roasted chickpeas"
-                    ]
-                },
-                {
-                    "day": "Tuesday",
-                    "breakfast": "Vegan overnight oats with almond milk, berries, and nuts",
-                    "lunch": "Quinoa and black bean salad with corn, bell peppers, and lime dressing",
-                    "dinner": "Vegan stuffed bell peppers with quinoa and black beans",
-                    "snacks": [
-                        "Carrot sticks with hummus",
-                        "Vegan energy balls"
-                    ]
-                },
-                {
-                    "day": "Wednesday",
-                    "breakfast": "Vegan tofu scramble with spinach, bell peppers, and turmeric",
-                    "lunch": "Vegan wrap with roasted vegetables and avocado",
-                    "dinner": "Vegan chickpea curry with basmati rice",
-                    "snacks": [
-                        "Celery sticks with almond butter",
-                        "Vegan trail mix"
-                    ]
-                },
-                {
-                    "day": "Thursday",
-                    "breakfast": "Vegan breakfast burrito with tofu, black beans, and salsa",
-                    "lunch": "Vegan kale salad with quinoa, cranberries, and lemon-tahini dressing",
-                    "dinner": "Vegan black bean burger with sweet potato fries",
-                    "snacks": [
-                        "Vegan yogurt with mixed berries",
-                        "Air-popped popcorn"
-                    ]
-                },
-                {
-                    "day": "Friday",
-                    "breakfast": "Vegan banana pancakes with maple syrup and walnuts",
-                    "lunch": "Vegan sushi rolls with avocado, cucumber, and tofu",
-                    "dinner": "Vegan vegetable stir-fry with tofu and brown rice",
-                    "snacks": [
-                        "Vegan protein bar",
-                        "Raw almonds"
-                    ]
-                }
-            ]
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Spinal Twist",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Groin Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Tricep Stretch",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Hip Opener",
+              "sets": 2,
+              "reps": 10
+            },
+            {
+              "name": "Ankle Mobility",
+              "sets": 2,
+              "reps": 10
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "id": 5,
+      "title": "HIIT Workout Plan",
+      "description": "A high-intensity interval training (HIIT) workout plan for maximum calorie burn.",
+      "image": "https://images.unsplash.com/photo-1609096458733-95b38583ac4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "details": "This workout plan incorporates high-intensity interval training (HIIT) exercises to maximize calorie burn and improve cardiovascular fitness. HIIT workouts involve short bursts of intense exercise followed by periods of rest or low-intensity activity.",
+      "workouts": [
+        {
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Sprint Intervals",
+              "duration": "10 sets of 30 seconds sprinting, 30 seconds rest"
+            },
+            {
+              "name": "Burpees",
+              "duration": "3 sets of 12 reps"
+            },
+            {
+              "name": "Jumping Lunges",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Mountain Climbers",
+              "duration": "3 sets of 20 reps"
+            },
+            {
+              "name": "Plank",
+              "duration": "3 sets of 30 seconds"
+            }
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "Circuit Training",
+              "duration": "5 sets of 1 minute per exercise with 30 seconds rest"
+            },
+            {
+              "name": "Jump Squats",
+              "duration": "3 sets of 10 reps"
+            },
+            {
+              "name": "Box Jumps",
+              "duration": "3 sets of 8 reps"
+            },
+            {
+              "name": "Bicycle Crunches",
+              "duration": "3 sets of 20 reps"
+            },
+            {
+              "name": "Plank Jacks",
+              "duration": "3 sets of 12 reps"
+            }
+          ]
+        },
+        {
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Tabata Intervals",
+              "duration": "8 sets of 20 seconds high-intensity exercise, 10 seconds rest"
+            },
+            {
+              "name": "Mountain Climbers",
+              "duration": "3 sets of 20 reps"
+            },
+            {
+              "name": "Jumping Jacks",
+              "duration": "3 sets of 30 seconds"
+            },
+            {
+              "name": "High Knees",
+              "duration": "3 sets of 20 reps"
+            },
+            {
+              "name": "Russian Twist",
+              "duration": "3 sets of 12 reps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Yoga and Meditation Plan",
+      "description": "A yoga and meditation plan for stress relief and relaxation.",
+      "image": "https://images.unsplash.com/photo-1484452330304-377cdeb05340?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80",
+      "details": "This plan combines yoga poses and meditation techniques to promote relaxation, reduce stress, and improve overall well-being. It is suitable for all fitness levels and can be practiced at home or in a yoga studio.",
+      "workouts": [
+        {
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Sun Salutation",
+              "duration": "3 sets of 12 repetitions"
+            },
+            {
+              "name": "Child's Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Cat-Cow Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Tree Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Corpse Pose (Savasana)",
+              "duration": "5 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "exercises": [
+            {
+              "name": "Seated Forward Bend",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Warrior II Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Bridge Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Legs-Up-the-Wall Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "Triangle Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Camel Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Pigeon Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Child's Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Thursday",
+          "exercises": [
+            {
+              "name": "Chair Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Fish Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Downward Facing Dog",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Happy Baby Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Warrior I Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Extended Triangle Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Child's Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Corpse Pose (Savasana)",
+              "duration": "5 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Saturday",
+          "exercises": [
+            {
+              "name": "Downward Facing Dog",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Cobra Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Fish Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Seated Forward Bend",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        },
+        {
+          "day": "Sunday",
+          "exercises": [
+            {
+              "name": "Sun Salutation",
+              "duration": "3 sets of 12 repetitions"
+            },
+            {
+              "name": "Tree Pose",
+              "duration": "1 minute per side"
+            },
+            {
+              "name": "Cat-Cow Pose",
+              "duration": "1 minute"
+            },
+            {
+              "name": "Child's Pose",
+              "duration": "2 minutes"
+            },
+            {
+              "name": "Meditation",
+              "duration": "10 minutes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Bodyweight Workout Plan",
+      "description": "A workout plan that uses only bodyweight exercises to build strength and endurance.",
+      "image": "https://images.unsplash.com/photo-1598266663439-2056e6900339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+      "details": "This workout plan is designed for individuals who prefer to train using their own bodyweight. It consists of a variety of exercises that target different muscle groups and can be performed anywhere without the need for equipment.",
+      "workouts": [
+        {
+          "day": "Monday",
+          "exercises": [
+            {
+              "name": "Push-Ups",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Squats",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Lunges",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            },
+            {
+              "name": "Mountain Climbers",
+              "sets": 3,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "exercises": [
+            {
+              "name": "Burpees",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Jumping Jacks",
+              "sets": 3,
+              "reps": 15
+            },
+            {
+              "name": "Chair Dips",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Leg Raises",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            }
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "exercises": [
+            {
+              "name": "Push-Ups",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Squats",
+              "sets": 3,
+              "reps": 15
+            },
+            {
+              "name": "Jumping Lunges",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "45 seconds"
+            },
+            {
+              "name": "Bicycle Crunches",
+              "sets": 3,
+              "reps": 15
+            }
+          ]
+        },
+        {
+          "day": "Thursday",
+          "exercises": [
+            {
+              "name": "Mountain Climbers",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Jumping Jacks",
+              "sets": 3,
+              "reps": 15
+            },
+            {
+              "name": "Chair Dips",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Leg Raises",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            }
+          ]
+        },
+        {
+          "day": "Friday",
+          "exercises": [
+            {
+              "name": "Push-Ups",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Squats",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Lunges",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            },
+            {
+              "name": "Mountain Climbers",
+              "sets": 3,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "day": "Saturday",
+          "exercises": [
+            {
+              "name": "Burpees",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Jumping Jacks",
+              "sets": 3,
+              "reps": 15
+            },
+            {
+              "name": "Chair Dips",
+              "sets": 3,
+              "reps": 10
+            },
+            {
+              "name": "Leg Raises",
+              "sets": 3,
+              "reps": 12
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "duration": "30 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mealPlans": [
+    {
+      "id": 1,
+      "title": "Healthy Eating Meal Plan",
+      "description": "A balanced and nutritious meal plan for healthy eating.",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVhbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+      "details": "This meal plan is designed to provide a balanced and nutritious diet for overall health and well-being. It includes three main meals and two snacks per day, with a focus on whole foods and portion control.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Oatmeal with berries and a sprinkle of almonds",
+          "lunch": "Grilled chicken breast with quinoa and steamed vegetables",
+          "dinner": "Salmon fillet with roasted sweet potatoes and saut\u00c3\u00a9ed spinach",
+          "snacks": [
+            "Greek yogurt with mixed nuts",
+            "Carrot sticks with hummus"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Vegetable omelette with whole grain toast",
+          "lunch": "Mixed green salad with grilled shrimp and balsamic dressing",
+          "dinner": "Turkey meatballs with whole wheat pasta and marinara sauce",
+          "snacks": ["Apple slices with almond butter", "Hard-boiled eggs"]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Smoothie with spinach, banana, almond milk, and chia seeds",
+          "lunch": "Quinoa salad with roasted vegetables and feta cheese",
+          "dinner": "Grilled tofu with brown rice and stir-fried vegetables",
+          "snacks": [
+            "Cottage cheese with sliced peaches",
+            "Trail mix with dried fruits and nuts"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Whole grain toast with avocado and poached eggs",
+          "lunch": "Chicken and vegetable stir-fry with brown rice",
+          "dinner": "Baked cod with quinoa and steamed broccoli",
+          "snacks": [
+            "Celery sticks with peanut butter",
+            "Cherry tomatoes with mozzarella"
+          ]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Yogurt parfait with granola and mixed berries",
+          "lunch": "Tuna salad wrap with whole wheat tortilla and mixed greens",
+          "dinner": "Grilled steak with roasted potatoes and grilled asparagus",
+          "snacks": ["Mixed fruit salad", "Rice cakes with almond butter"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Vegetarian Meal Plan",
+      "description": "A delicious and nutritious meal plan for vegetarians.",
+      "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+      "details": "This vegetarian meal plan is designed to provide a well-rounded diet without meat. It includes a variety of plant-based proteins, whole grains, fruits, and vegetables to ensure you meet your nutritional needs.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Vegetable scramble with tofu, bell peppers, and spinach",
+          "lunch": "Chickpea salad with mixed greens, tomatoes, and balsamic dressing",
+          "dinner": "Lentil curry with brown rice and naan bread",
+          "snacks": ["Mixed fruit salad", "Hummus with carrot sticks"]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Avocado toast with whole grain bread and cherry tomatoes",
+          "lunch": "Quinoa and black bean burrito bowl with salsa and guacamole",
+          "dinner": "Eggplant Parmesan with whole wheat pasta",
+          "snacks": [
+            "Greek yogurt with honey and walnuts",
+            "Trail mix with dried fruits and nuts"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Spinach and mushroom omelette with whole grain toast",
+          "lunch": "Roasted vegetable wrap with hummus",
+          "dinner": "Sweet potato and black bean chili",
+          "snacks": [
+            "Apple slices with almond butter",
+            "Cucumber and tomato salad"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Blueberry and almond smoothie with chia seeds",
+          "lunch": "Caprese salad with fresh mozzarella, tomatoes, and basil",
+          "dinner": "Vegetable stir-fry with tofu and brown rice",
+          "snacks": [
+            "Cottage cheese with sliced peaches",
+            "Rice cakes with peanut butter"
+          ]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Oatmeal with mixed berries and a sprinkle of flaxseeds",
+          "lunch": "Mediterranean quinoa salad with feta cheese and olives",
+          "dinner": "Egg fried rice with mixed vegetables",
+          "snacks": ["Carrot and celery sticks with hummus", "Mixed nuts"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Gluten-Free Meal Plan",
+      "description": "A gluten-free meal plan for individuals with gluten intolerance or sensitivity.",
+      "image": "https://images.unsplash.com/photo-1497888329096-51c27beff665?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lYWwlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "details": "This gluten-free meal plan excludes all sources of gluten, such as wheat, barley, and rye. It focuses on naturally gluten-free ingredients and offers a variety of options for breakfast, lunch, dinner, and snacks.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Quinoa porridge with mixed berries and honey",
+          "lunch": "Grilled chicken salad with mixed greens and lemon vinaigrette",
+          "dinner": "Grilled salmon with roasted vegetables and quinoa",
+          "snacks": ["Rice cakes with almond butter", "Fresh fruit"]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Egg and vegetable scramble with gluten-free toast",
+          "lunch": "Taco bowl with ground turkey, black beans, and avocado",
+          "dinner": "Stir-fried shrimp with gluten-free noodles and vegetables",
+          "snacks": [
+            "Celery sticks with peanut butter",
+            "Gluten-free granola bar"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Gluten-free pancakes with maple syrup and sliced bananas",
+          "lunch": "Quinoa and vegetable stir-fry",
+          "dinner": "Grilled chicken breast with sweet potato fries and steamed broccoli",
+          "snacks": ["Greek yogurt with gluten-free granola", "Popcorn"]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Smoothie bowl with almond milk, spinach, and gluten-free granola",
+          "lunch": "Salmon and avocado sushi rolls with gluten-free soy sauce",
+          "dinner": "Baked chicken with quinoa and roasted Brussels sprouts",
+          "snacks": ["Rice crackers with hummus", "Mixed nuts"]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Gluten-free oatmeal with sliced peaches and cinnamon",
+          "lunch": "Chicken and vegetable kebabs with quinoa",
+          "dinner": "Grilled steak with mashed sweet potatoes and saut\u00c3\u00a9ed asparagus",
+          "snacks": ["Carrot sticks with ranch dip", "Gluten-free pretzels"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "High-Protein Meal Plan",
+      "description": "A meal plan designed to provide a high intake of protein for muscle growth and recovery.",
+      "image": "https://images.unsplash.com/photo-1489391013510-49401c8a3b6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "details": "This high-protein meal plan focuses on lean protein sources to support muscle growth and recovery. It includes three main meals and two snacks per day, with an emphasis on incorporating protein-rich foods into each meal.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Scrambled eggs with spinach and smoked salmon",
+          "lunch": "Grilled chicken breast with quinoa and roasted vegetables",
+          "dinner": "Grilled salmon with sweet potato mash and steamed asparagus",
+          "snacks": [
+            "Greek yogurt with mixed berries and chia seeds",
+            "Protein shake with almond milk and banana"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Protein pancakes topped with Greek yogurt and sliced almonds",
+          "lunch": "Tuna salad with mixed greens, chickpeas, and olive oil dressing",
+          "dinner": "Lean beef stir-fry with brown rice and broccoli",
+          "snacks": ["Hard-boiled eggs", "Protein bar with nuts and seeds"]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Omelette with egg whites, turkey bacon, and vegetables",
+          "lunch": "Grilled chicken salad with quinoa, avocado, and balsamic vinaigrette",
+          "dinner": "Baked cod with quinoa pilaf and roasted Brussels sprouts",
+          "snacks": [
+            "Cottage cheese with pineapple chunks",
+            "Roasted chickpeas"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Protein smoothie with spinach, almond milk, and peanut butter",
+          "lunch": "Grilled shrimp with whole wheat pasta and tomato sauce",
+          "dinner": "Grilled chicken breast with sweet potato fries and green beans",
+          "snacks": ["Beef jerky", "Protein balls with oats and almond butter"]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Greek yogurt parfait with granola and mixed berries",
+          "lunch": "Turkey meatballs with whole wheat pita bread and tzatziki sauce",
+          "dinner": "Grilled steak with quinoa salad and roasted vegetables",
+          "snacks": [
+            "Protein pudding with almond milk and cocoa powder",
+            "Edamame beans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Low-Carb Meal Plan",
+      "description": "A meal plan designed to reduce carbohydrate intake and promote weight loss.",
+      "image": "https://images.unsplash.com/photo-1505714197102-6ae95091ed70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "details": "This low-carb meal plan focuses on reducing carbohydrate intake while increasing the consumption of healthy fats and protein. It includes three main meals and two snacks per day, with an emphasis on non-starchy vegetables and lean protein sources.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Spinach and mushroom omelette with feta cheese",
+          "lunch": "Grilled chicken salad with mixed greens and avocado",
+          "dinner": "Baked salmon with steamed broccoli and cauliflower rice",
+          "snacks": ["Celery sticks with cream cheese", "Mixed nuts"]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Avocado and bacon stuffed mushrooms",
+          "lunch": "Tuna salad lettuce wraps with cucumber and tomato",
+          "dinner": "Grilled chicken breast with zucchini noodles and pesto",
+          "snacks": ["Hard-boiled eggs", "Cheese slices"]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Chia seed pudding with almond milk and raspberries",
+          "lunch": "Turkey and avocado roll-ups with lettuce wraps",
+          "dinner": "Baked cod with roasted Brussels sprouts and lemon butter sauce",
+          "snacks": ["Cucumber slices with guacamole", "Beef jerky"]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Baked egg cups with spinach and goat cheese",
+          "lunch": "Grilled shrimp salad with mixed greens and balsamic vinaigrette",
+          "dinner": "Grilled chicken breast with roasted asparagus and mashed cauliflower",
+          "snacks": ["Almond butter with celery sticks", "Seaweed snacks"]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Vegetable frittata with egg whites and feta cheese",
+          "lunch": "Salmon salad with mixed greens, olives, and olive oil dressing",
+          "dinner": "Grilled steak with cauliflower mash and saut\u00c3\u00a9ed mushrooms",
+          "snacks": ["Greek yogurt with sugar-free sweetener", "Pork rinds"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Vegan Meal Plan",
+      "description": "A plant-based meal plan suitable for vegans, emphasizing nutrient-rich ingredients.",
+      "image": "https://images.unsplash.com/photo-1541014741259-de529411b96a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+      "details": "This vegan meal plan is designed to provide a well-rounded plant-based diet, rich in nutrients and flavors. It includes three main meals and two snacks per day, with an emphasis on whole grains, legumes, fruits, and vegetables.",
+      "meals": [
+        {
+          "day": "Monday",
+          "breakfast": "Vegan protein smoothie with almond milk, banana, and chia seeds",
+          "lunch": "Chickpea salad with mixed greens, cherry tomatoes, and tahini dressing",
+          "dinner": "Vegan lentil curry with brown rice",
+          "snacks": ["Fresh fruit salad", "Roasted chickpeas"]
+        },
+        {
+          "day": "Tuesday",
+          "breakfast": "Vegan overnight oats with almond milk, berries, and nuts",
+          "lunch": "Quinoa and black bean salad with corn, bell peppers, and lime dressing",
+          "dinner": "Vegan stuffed bell peppers with quinoa and black beans",
+          "snacks": ["Carrot sticks with hummus", "Vegan energy balls"]
+        },
+        {
+          "day": "Wednesday",
+          "breakfast": "Vegan tofu scramble with spinach, bell peppers, and turmeric",
+          "lunch": "Vegan wrap with roasted vegetables and avocado",
+          "dinner": "Vegan chickpea curry with basmati rice",
+          "snacks": ["Celery sticks with almond butter", "Vegan trail mix"]
+        },
+        {
+          "day": "Thursday",
+          "breakfast": "Vegan breakfast burrito with tofu, black beans, and salsa",
+          "lunch": "Vegan kale salad with quinoa, cranberries, and lemon-tahini dressing",
+          "dinner": "Vegan black bean burger with sweet potato fries",
+          "snacks": ["Vegan yogurt with mixed berries", "Air-popped popcorn"]
+        },
+        {
+          "day": "Friday",
+          "breakfast": "Vegan banana pancakes with maple syrup and walnuts",
+          "lunch": "Vegan sushi rolls with avocado, cucumber, and tofu",
+          "dinner": "Vegan vegetable stir-fry with tofu and brown rice",
+          "snacks": ["Vegan protein bar", "Raw almonds"]
+        }
+      ]
+    }
+  ]
 }
